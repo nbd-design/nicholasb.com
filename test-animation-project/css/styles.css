@@ -6,7 +6,9 @@
 }
 
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -21,14 +23,14 @@ body {
     padding: 0;
 }
 
-.emblem-container{
+.emblem-container {
     position: sticky;
     top: 0;
     width: 100vw;
     height: 100vh;
 }
 
-.emblem-trigger{
+.emblem-trigger {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -36,7 +38,7 @@ body {
     right: 40px;
 }
 
-.emblem{
+.emblem {
     width: 200px;
 }
 
@@ -55,26 +57,26 @@ footer {
 /* CONTENT WRAPPER RESPONSIVE PADDING */
 /*-- Main Content Wrapper Padding Declarations -- Use in <divs> and <sections> but never on <body> --*/
 
-.content-wrapper{
+.content-wrapper {
     padding-left: max(((100vw - 1320px) / 2), 80px);
     padding-right: max(((100vw - 1320px) / 2), 80px);
 }
 
 /* Not entirely necessary, the main declaration handles this viewport size at 80px */
-@media screen and (max-width: 1040px) and (min-width: 769px){ 
-    .content-wrapper{
+@media screen and (max-width: 1040px) and (min-width: 769px) {
+    .content-wrapper {
         padding: 0 64px;
     }
 }
 
-@media screen and (max-width: 768px) and (min-width: 491px){
-    .content-wrapper{
+@media screen and (max-width: 768px) and (min-width: 491px) {
+    .content-wrapper {
         padding: 0 32px;
     }
 }
 
-@media screen and (max-width: 490px){
-    .content-wrapper{
+@media screen and (max-width: 490px) {
+    .content-wrapper {
         padding: 0 20px;
     }
 }
@@ -82,11 +84,11 @@ footer {
 /* MAIN HERO CONTENT/LAYOUT STYLES */
 /* Main Hero Content Styles Including Content Layout and Container Styling */
 
-.layer-1{
+.layer-1 {
     z-index: 999;
 }
 
-.hero-copy-container{
+.hero-copy-container {
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -99,15 +101,15 @@ footer {
     justify-content: center;
 }
 
-.goodbye{
+.goodbye {
     text-align: left;
 }
 
-.boring{
+.boring {
     text-align: right;
 }
 
-.services{
+.services {
     max-width: 648px;
 }
 
@@ -115,25 +117,25 @@ footer {
 /* GRID PAGE STYLES */
 /* inner background grid container */
 
-.grid-parent-container{
+.grid-parent-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(100% / 16), 1fr));
     overflow: hidden;
     /* background-color: rgb(22, 22, 22); */
 }
 
-.grid-mask{
+.grid-mask {
     -webkit-mask-image: radial-gradient(50% 50% at 50% 50%, #000 50%, rgba(0, 0, 0, 0.00) 100%);
 }
 
 [class^="item"] {
     /* min-height: 100px;
-    min-width: 100px; */
+min-width: 100px; */
     border: 0.5px solid rgba(53, 53, 53, 1);
     /* aspect-ratio: 1; */
 }
 
-.bg-grid-container{
+.bg-grid-container {
     height: 100vh;
     display: grid;
     overflow: hidden;
@@ -141,24 +143,27 @@ footer {
 
 /* GRID CELL STYLING */
 
-.item-23, .item-121{
+.item-23,
+.item-121 {
     background: rgba(255, 199, 0, 0.25);
 }
 
-.item-45, .item-85{
+.item-45,
+.item-85 {
     background: rgba(255, 0, 0, 0.25);
 }
 
-.item-51, .item-91{
+.item-51,
+.item-91 {
     background: rgba(0, 13, 255, 0.25);
 }
 
-.layer-3{
+.layer-3 {
     margin-top: -100vh;
     z-index: 0;
 }
 
-.grid-wrapper{
+.grid-wrapper {
     padding-left: max(((100vw - 1600px) / 2), 80px);
     padding-right: max(((100vw - 1600px) / 2), 80px);
     padding-top: max(((100vh - 90vh) / 2), 80px);
@@ -167,45 +172,45 @@ footer {
 }
 
 /* Not entirely necessary, the main declaration handles this viewport size at 80px */
-@media screen and (max-width: 1040px) and (min-width: 769px){ 
-    .grid-wrapper{
+@media screen and (max-width: 1040px) and (min-width: 769px) {
+    .grid-wrapper {
         padding: 64px 64px;
     }
 }
 
-@media screen and (max-width: 768px) and (min-width: 491px){
-    .grid-wrapper{
+@media screen and (max-width: 768px) and (min-width: 491px) {
+    .grid-wrapper {
         padding: 32px 32px;
     }
 }
 
-@media screen and (max-width: 490px){
-    .grid-wrapper{
+@media screen and (max-width: 490px) {
+    .grid-wrapper {
         padding: 20px 20px;
     }
 }
 
-.say-title{
+.say-title {
     display: inline-block;
     z-index: 999;
 }
 
-.goodbye-title{
+.goodbye-title {
     display: inline-block;
     z-index: 999;
 }
 
-.to-title{
+.to-title {
     display: inline-block;
     z-index: 999;
 }
 
-.boring-title{
+.boring-title {
     display: inline-block;
     z-index: 999;
 }
 
-.period-title{
+.period-title {
     color: #E10600;
     display: inline-block;
     z-index: 999;
