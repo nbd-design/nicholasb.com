@@ -5,6 +5,7 @@
     <title>GSAP Test Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
@@ -12,15 +13,41 @@
 </head>
 
 <body>
+    <section id="grid-bg">
+    <!-- Spinning Logo Overlay -->
     <div class="emblem-container">
-    <div class="emblem-trigger">
-        <img class="emblem" src="images/nbd-thumbnail_emblem_transparent-reverse.png">
+        <div class="emblem-trigger">
+            <img class="emblem" src="images/nbd-thumbnail_emblem_transparent-reverse.png">
+        </div>
     </div>
-</div>
+
+    <!-- Main Hero Text Section -->
+    
+        <section class="content-wrapper layer-1" data-speed="0.8">
+            <div class="hero-copy-container">
+                <div>
+                    <h1 class="title goodbye"><span class="say-title">Say</span> <span
+                            class="goodbye-title">goodbye</span></h1>
+                    <h1 class="title boring"><span class="to-title">to</span> <span
+                            class="boring-title">boring</span><span class="period-title">.</span></h1>
+                </div>
+                <div class="services">
+                    <h2 class="heading-1 sentinel-pro-light">Branding & Identity, Displays & Exhibits, Video & Photo,
+                        Advertising & Communication, and Physical & Digital Experiences.</h2>
+                </div>
+            </div>
+        </section>
+        <section class="grid-wrapper bg-grid-container layer-3">
+            <div class="grid-parent-container grid-mask"></div>
+        </section>
+        </section>
+
+    <!-- Footer -->
     <footer>
         <script src="js/gsap/gsap.min.js"></script>
         <script src="js/gsap/ScrollTrigger.min.js"></script>
         <script src="js/script.js"></script>
     </footer>
 </body>
+
 </html>

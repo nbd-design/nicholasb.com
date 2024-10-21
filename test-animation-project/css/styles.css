@@ -1,34 +1,24 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'DM Sans', Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     /* justify-content: space-around; */
     flex-direction: column;
     height: 400vh;
     background-color: black;
     margin: 0;
     padding: 0;
-}
-
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 120px;
-    height: 120px;
-    border-radius: 16px;
-}
-
-.red-gradient {
-    background: linear-gradient(270deg, #E10600 0%, rgba(225, 6, 0, 0.25) 99.99%);
-    background-color: hotpink;
 }
 
 .emblem-container{
@@ -51,11 +41,181 @@ body {
 }
 
 p {
-    color: white;
+    color: #FFFDED;
     font-weight: 700;
     font-size: 2rem;
 }
 
 footer {
     display: none;
+}
+
+
+
+/* CONTENT WRAPPER RESPONSIVE PADDING */
+/*-- Main Content Wrapper Padding Declarations -- Use in <divs> and <sections> but never on <body> --*/
+
+.content-wrapper{
+    padding-left: max(((100vw - 1320px) / 2), 80px);
+    padding-right: max(((100vw - 1320px) / 2), 80px);
+}
+
+/* Not entirely necessary, the main declaration handles this viewport size at 80px */
+@media screen and (max-width: 1040px) and (min-width: 769px){ 
+    .content-wrapper{
+        padding: 0 64px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 491px){
+    .content-wrapper{
+        padding: 0 32px;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .content-wrapper{
+        padding: 0 20px;
+    }
+}
+
+/* MAIN HERO CONTENT/LAYOUT STYLES */
+/* Main Hero Content Styles Including Content Layout and Container Styling */
+
+.layer-1{
+    z-index: 999;
+}
+
+.hero-copy-container{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100vh;
+    margin-top: -100vh;
+    top: 0;
+    color: #FFFDED;
+    gap: 56px;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.goodbye{
+    text-align: left;
+}
+
+.boring{
+    text-align: right;
+}
+
+.services{
+    max-width: 648px;
+}
+
+
+/* GRID PAGE STYLES */
+/* inner background grid container */
+
+.grid-parent-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 16), 1fr));
+    overflow: hidden;
+    /* background-color: rgb(22, 22, 22); */
+}
+
+.grid-mask{
+    -webkit-mask-image: radial-gradient(50% 50% at 50% 50%, #000 50%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+[class^="item"] {
+    /* min-height: 100px;
+    min-width: 100px; */
+    border: 0.5px solid rgba(53, 53, 53, 1);
+    /* aspect-ratio: 1; */
+}
+
+.bg-grid-container{
+    height: 100vh;
+    display: grid;
+    overflow: hidden;
+}
+
+/* GRID CELL STYLING */
+
+.item-23, .item-121{
+    background: rgba(255, 199, 0, 0.25);
+}
+
+.item-45, .item-85{
+    background: rgba(255, 0, 0, 0.25);
+}
+
+.item-51, .item-91{
+    background: rgba(0, 13, 255, 0.25);
+}
+
+.layer-3{
+    margin-top: -100vh;
+    z-index: 0;
+}
+
+.grid-wrapper{
+    padding-left: max(((100vw - 1600px) / 2), 80px);
+    padding-right: max(((100vw - 1600px) / 2), 80px);
+    padding-top: max(((100vh - 90vh) / 2), 80px);
+    padding-bottom: max(((100vh - 90vh) / 2), 80px);
+    transform: perspective(500px);
+}
+
+/* Not entirely necessary, the main declaration handles this viewport size at 80px */
+@media screen and (max-width: 1040px) and (min-width: 769px){ 
+    .grid-wrapper{
+        padding: 64px 64px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 491px){
+    .grid-wrapper{
+        padding: 32px 32px;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .grid-wrapper{
+        padding: 20px 20px;
+    }
+}
+
+.say-title{
+    display: inline-block;
+    z-index: 999;
+}
+
+.goodbye-title{
+    display: inline-block;
+    z-index: 999;
+}
+
+.to-title{
+    display: inline-block;
+    z-index: 999;
+}
+
+.boring-title{
+    display: inline-block;
+    z-index: 999;
+}
+
+.period-title{
+    color: #E10600;
+    display: inline-block;
+    z-index: 999;
+}
+
+#grid-bg {
+    display: flex;
+    flex-direction: column;
+    height: 400vh;
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }
