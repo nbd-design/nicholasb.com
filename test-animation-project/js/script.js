@@ -33,9 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             trigger: ".logos",
             scrub: 1,
             start: "top 102%",
-            end: "bottom top",
-            markers: true,
-            
+            end: "bottom top",           
         }
     })
 
