@@ -24,7 +24,7 @@ body {
 }
 
 .emblem-container {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -93,7 +93,6 @@ footer {
     flex-flow: column;
     width: 100%;
     height: 100vh;
-    margin-top: -100vh;
     top: 0;
     color: #FFFDED;
     gap: 56px;
@@ -219,8 +218,30 @@ min-width: 100px; */
 #grid-bg {
     display: flex;
     flex-direction: column;
-    height: 400vh;
     background-color: black;
     margin: 0;
     padding: 0;
+}
+
+/* ---------- Logo Row Styles, Scroll Animation in script.js ---------- */
+
+.logos{
+    overflow: hidden;
+    padding: 40px 40px;
+    white-space: nowrap;
+    margin: 160px 80px 0 80px;
+}
+
+.logos-slide{
+    display: inline-block;
+    /* animation: 50s slide infinite linear; */
+}
+
+.logos-slide img{
+    height: 48px;
+    margin: 0 40px;
+}
+
+.logo-row-mask{
+    -webkit-mask-image: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, #000 15%, #000 85%, rgba(0, 0, 0, 0.00) 100%);
 }

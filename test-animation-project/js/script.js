@@ -25,6 +25,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ease: 'none',
     });
 
+    // LOGO ROW SCROLLING SIDEWAYS ON X AXIS
+    gsap.to(".logos-slide", {
+        xPercent: -25,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".logos",
+            scrub: 1,
+            start: "top 102%",
+            end: "bottom top",
+            markers: true,
+            
+        }
+    })
+
     // HERO BACKGROUND TILE ANIMATION
     // Hero background tiles fade in and out animation
     gsap.timeline().from(".item-121", {
@@ -110,7 +124,7 @@ gsap.to("[data-speed]", {
 // INTRO TEXT ANIMATION TIMELINE ON LOAD
 
 // let introTl = gsap.timeline({delay: 0.75}); //Un-comment this line of code to turn it back into a timeline
-gsap.from(".grid-parent-container", { filter: "blur(5px)", rotationX: -16, opacity: 1, duration: 2, delay: 0.1, ease: 'back.inOut' });
+// gsap.from(".grid-parent-container", { filter: "blur(5px)", rotationX: -16, opacity: 1, duration: 2, delay: 0.1, ease: 'back.inOut' });
 gsap.from(".say-title", { x: 100, opacity: 0, duration: 0.4, delay: 1, ease: 'back.inOut' });
 gsap.from(".goodbye-title", { x: 100, opacity: 0, duration: 0.4, delay: 1.1, ease: 'back.inOut' });
 gsap.from(".to-title", { x: 100, opacity: 0, duration: 0.4, delay: 1.2, ease: 'back.inOut' });
