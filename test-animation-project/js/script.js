@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // LOGO ROW SCROLLING SIDEWAYS ON X AXIS
     gsap.to(".logos-slide", {
-        xPercent: -25,
+        xPercent: -30,
         ease: "none",
         scrollTrigger: {
             trigger: ".logos",
-            scrub: 1,
+            scrub: true,
             start: "top 102%",
             end: "bottom top",           
         }
