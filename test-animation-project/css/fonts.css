@@ -54,62 +54,64 @@
     font-weight: 800;
     font-size: clamp(3.125rem, 16.556vw + -1.159rem, 12.5rem);
     line-height: clamp(3.125rem, 16.556vw + -1.159rem, 12.5rem);
-    letter-spacing: -0.07em;
+    letter-spacing: -0.025em;
 }
 
 .display-0 {
-    font-size: clamp(3rem, 4.619vw + 1.805rem, 5.5rem);
-    line-height: clamp(3.9rem, 3.972vw + 2.872rem, 6.05rem);
-    letter-spacing: -0.5px;
-    color: #000;
+    font-size: clamp(3rem, 4.619vw + 1.805rem, 7.5rem);
+    line-height: clamp(3.9rem, 3.972vw + 2.872rem, 7.875rem);
+    letter-spacing: -0.05em;
+    color: #fffded;
 }
 
 .display-1 {
     font-size: clamp(2.75rem, 2.771vw + 2.033rem, 4.25rem);
     line-height: clamp(3.575rem, 2.032vw + 3.049rem, 4.675rem);
     letter-spacing: -0.3px;
-    color: #000000;
+    color: #fffded;
 }
 
 .display-2 {
     font-size: clamp(2.25rem, 2.309vw + 1.652rem, 3.5rem);
     line-height: clamp(2.925rem, 1.709vw + 2.483rem, 3.85rem);
     letter-spacing: -0.2px;
-    color: #000000;
+    color: #fffded;
 }
 
 .display-3 {
     font-size: clamp(2rem, 1.386vw + 1.641rem, 2.75rem);
     line-height: clamp(2.6rem, 0.785vw + 2.397rem, 3.025rem);
-    color: #000000;
+    color: #fffded;
 }
 
 .display-4 {
     font-size: clamp(1.75rem, 1.039vw + 1.481rem, 2.313rem);
     line-height: clamp(2.275rem, 0.497vw + 2.147rem, 2.544rem);
-    color: #000000;
+    color: #fffded;
 }
 
 .display-5 {
     font-size: clamp(1.625rem, 0.693vw + 1.446rem, 2rem);
     line-height: clamp(2.113rem, 0.162vw + 2.071rem, 2.2rem);
-    color: #000000;
+    color: #fffded;
 }
 
 .heading-1{
     color: #FFFDED;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: clamp(1.25rem, 0.883vw + 1.022rem, 1.75rem);
     line-height: clamp(1.875rem, 1.325vw + 1.532rem, 2.625rem);
+    margin-bottom: 32px;
 }
 
 .p-large {
     font-family: "DM Sans", sans-serif;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-style: normal;
     font-size: clamp(1.125rem, 0.462vw + 1.005rem, 1.375rem);
     line-height: clamp(1.744rem, 0.462vw + 1.624rem, 1.994rem);
     letter-spacing: -0.25px;
+    margin-bottom: 32px;
 }
 
 .p-reg {

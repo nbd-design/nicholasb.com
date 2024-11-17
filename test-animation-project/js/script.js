@@ -167,3 +167,25 @@ main.addEventListener("pointerleave", (e) => {
     outerRX(0);
     outerRY(0);
 });
+
+
+// CASE STUDY CARD SCROLL ANIMATIONS
+// 3D rotation and z transform of grid on scroll
+
+
+
+let cs = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".case-study--large",
+        start: "top 75%",
+        end: "bottom",
+        // markers: true
+    },
+});
+
+cs.from(".cs-01",{
+    scaleY: 0.9, 
+    opacity: 0, 
+    ease: 'back.inOut', 
+    duration: 0.5
+});
