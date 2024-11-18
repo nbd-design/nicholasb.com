@@ -381,7 +381,7 @@ min-width: 100px; */
 }
 
 .cs-01{
-
+box-sizing: border-box;
 }
 
 .cs-02{
@@ -399,7 +399,7 @@ min-width: 100px; */
 }
 
 .cs-04{
-
+box-sizing: border-box;
 }
 
 .cs-05{
@@ -417,7 +417,7 @@ min-width: 100px; */
 }
 
 .cs-07{
-
+box-sizing: border-box;
 }
 
 /* Hover States */
