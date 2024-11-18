@@ -304,3 +304,19 @@
     font-style: normal;
     letter-spacing: -0.35px;
 }
+
+/*----------------------------------*/
+/*------ Font Styling Classes ------*/
+/*---------------------------------*/
+
+.center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
