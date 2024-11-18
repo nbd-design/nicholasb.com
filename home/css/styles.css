@@ -380,6 +380,12 @@ min-width: 100px; */
 	padding: 200px 0;
 }
 
+.nbd-services-heading{
+	max-width: 1080px;
+	padding: 200px 0;
+	margin: auto;
+}
+
 .cs-01{
 box-sizing: border-box;
 }
