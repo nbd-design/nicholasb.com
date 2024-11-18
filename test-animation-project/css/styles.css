@@ -18,7 +18,6 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-	height: 400vh;
 	background-color: black;
 	margin: 0;
 	padding: 0;
@@ -306,7 +305,7 @@ min-width: 100px; */
     display: flex;
     flex-flow: row nowrap;
     position: relative;
-    padding: 120px 0;
+    padding: 200px 0;
     gap: 136px;
     align-items: center;
 }
@@ -332,6 +331,7 @@ min-width: 100px; */
 .nbd-cs--medium{
     max-width: 312px;
     max-height: 312px;
+	aspect-ratio: 1/1;
 }
 
 
@@ -372,9 +372,60 @@ min-width: 100px; */
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
+	transition: all 200ms;
 }
 
 .nbd-heading-section{
 	max-width: 1080px;
-	padding: 120px 0;
+	padding: 200px 0;
+}
+
+.cs-01{
+
+}
+
+.cs-02{
+	position: absolute;
+	height: 30%;
+	right: 0;
+	bottom: -96px;
+}
+
+.cs-03{
+	position: absolute;
+	height: 30%;
+	right: 11.78%;
+	top: -120px;
+}
+
+.cs-04{
+
+}
+
+.cs-05{
+	position: absolute;
+	height: 30%;
+	right: 16.9%;
+	bottom: -96px;
+}
+
+.cs-06{
+	position: absolute;
+	height: 30%;
+	right: 11.78%;
+	top: -80px;
+}
+
+.cs-07{
+
+}
+
+/* Hover States */
+
+.nbd-cs-container:hover .nbd-cs-image{
+	top: 50%;
+    left: 50%;
+	transform: scale(1.05) translate(-47.5%, -47.5%);
+	filter: blur(4px);
+	transition: all 200ms;
 }
