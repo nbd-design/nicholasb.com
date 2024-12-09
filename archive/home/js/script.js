@@ -135,17 +135,17 @@ gsap.from(".emblem-trigger", { scale: 0, opacity: 0, ease: 'back.inOut', delay: 
 
 
 
-// FUNCTION TO CREATE GRID ITEMS WITHIN PARENT CONTAINER
+// // FUNCTION TO CREATE GRID ITEMS WITHIN PARENT CONTAINER
 
-var container = document.querySelector('.grid-parent-container')
+// var container = document.querySelector('.grid-parent-container')
 
-for (var i = 0; i < 128; i++) {
-    var el = document.createElement('div')
-    el.classList.add('item-' + (i + 1))
-    container.appendChild(el)
-}
+// for (var i = 0; i < 128; i++) {
+//     var el = document.createElement('div')
+//     el.classList.add('item-' + (i + 1))
+//     container.appendChild(el)
+// }
 
-console.log(container.children.length) // 128
+// console.log(container.children.length) // 128
 
 
 

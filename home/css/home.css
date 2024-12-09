@@ -1,0 +1,125 @@
+.hero{
+    position: relative;
+    height: 100vh;
+    justify-content: space-between;
+    padding-top: calc(var(--container-padding) + var(--nav-height));
+}
+
+.hero-content{
+    justify-content: space-between;
+    row-gap: var(--col-gap);
+}
+
+
+
+/* Medium: 601px - 880px */
+@media (min-width: 601px) and (max-width: 880px) {
+    /* Your styles for Medium screens go here */
+    .intro-content{
+        width: var(--col-span-all);
+    }
+}
+
+
+/* Medium: 601px - 880px */
+@media (min-width: 601px) and (max-width: 880px) {
+    /* Your styles for Medium screens go here */
+    .row-inner.hero-content{
+        flex-direction: column-reverse;
+    }
+}
+
+/* Small: 320px - 600px */
+@media (min-width: 320px) and (max-width: 600px) {
+    /* Your styles for Small screens go here */
+    .row-inner.hero-content{
+        flex-direction: column-reverse;
+    }
+}
+
+
+/* ---- HERO BACKGROUND GRADIENT ---- */
+
+.bg-gradient-wrapper{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+
+.bg-gradient-red{
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(1.5, 1);
+    opacity: 0.5;
+    --gradient-size: calc(var(--title-size) * 12);
+    width: var(--gradient-size);
+    height: var(--gradient-size);
+    background: radial-gradient(circle, #E10600 0%, rgba(var(--color-dark-rgb), 0) 66%);
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.bg-gradient-philosophy{
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%) scale(1.5, 1);
+    opacity: 0.5;
+    --gradient-size: calc(var(--title-size) * 12);
+    width: var(--gradient-size);
+    height: var(--gradient-size);
+    background: radial-gradient(circle, #4A44F2 0%, rgba(var(--color-dark-rgb), 0) 55%);
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 801;
+}
+
+/* LOGO ROW STYLES */
+
+.logo-row-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: calc(var(--container-padding) * 4);
+    padding-bottom: calc(var(--container-padding) * 4);
+}
+
+.logo-col{
+    padding: var(--container-padding) 0;
+    border: solid var(--color-border);
+    border-width: 1px 0;
+}
+
+img.customer-logo {
+    height: 48px;
+}
+
+/* Our Philosophy Section */
+
+.philosophy-wrapper{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: calc(var(--container-padding) * 4);
+    padding-bottom: calc(var(--container-padding) * 4);
+    overflow: visible;
+    align-items: center;
+}
+
+.col-monogram{
+    display: flex;
+    width: var(--col-span-2);
+    justify-content: center;
+}
+
+.nbd-monogram{
+    width: 80%;
+}
+
+.col-philosophy{
+    width: var(--col-span-2);
+}

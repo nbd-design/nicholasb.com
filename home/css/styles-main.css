@@ -1,0 +1,406 @@
+/* ------------------------------ */
+/* -------- GLOBAL RULES -------- */
+/* ------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ------------------------------ */
+/* -------- CSS VARIABLES-------- */
+/* ------------------------------ */
+
+:root {
+
+    /* ---------- */
+    /* Colors */
+    /* ---------- */
+
+    --primary-color: #E10600;
+    /* Primary brand color token */
+
+    /* Light grays */
+    --gray-0: #ffffff;
+    /* Pure white */
+    --gray-50: #fafafa;
+    /* Near-white */
+    --gray-100: #f5f5f5;
+    /* Very light gray */
+    --gray-200: #e5e5e5;
+    /* Light gray */
+    --gray-300: #d4d4d4;
+    /* Soft gray */
+
+    /* Medium grays */
+    --gray-400: #a3a3a3;
+    /* Medium-light gray */
+    --gray-500: #737373;
+    /* Neutral gray */
+    --gray-600: #525252;
+    /* Medium-dark gray */
+
+    /* Dark grays */
+    --gray-700: #404040;
+    /* Dark gray */
+    --gray-800: #262626;
+    /* Very dark gray */
+    --gray-900: #171717;
+    /* Almost black */
+    --gray-1000: #000000;
+    /* Pure black */
+
+    --color-border: rgba(var(--color-border-rgb), 0.225);
+    --color-border-rgb: 159, 161, 163;
+
+    --text-rev: var(--gray-0);
+
+
+    /* --------- */
+    /* Font Size */
+    /* --------- */
+
+    --body-copy-xl: clamp(1rem, 1.515vw + 0.432rem, 2.25rem);
+    --body-copy-line-height-xl: clamp(1.5rem, 2.545vw + 0.545rem, 3.6rem);
+
+    --font-size-medium: 16px;
+    /* Medium text size token */
+
+
+    /* ------------------ */
+    /* Column Width Rules */
+    /* ------------------ */
+
+    --col-xl: 100%;
+    --col-large: 75%;
+    --col-medium: 50%;
+    --col-small: 25%;
+
+
+    --col-span-all: calc(99.99vw - (var(--col-gap) * 2));
+    --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 0.75);
+    --col-span-2: calc((99.99vw - (var(--col-gap) * 2)) * 0.5);
+    --col-span-1: calc((99.99vw - (var(--col-gap) * 2)) * 0.25);
+
+    --two-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 1.5);
+
+
+    /* --------------------- */
+    /* Section Padding Rules */
+    /* --------------------- */
+
+    --section-vert-padding-xl: 120px;
+    --section-vert-padding-large: 104px;
+    --section-padding-medium: 96px;
+    --section-padding-small: 80px;
+
+
+    /* -------------------- */
+    /* Column Padding Rules */
+    /* -------------------- */
+
+    --col-padding-standard: 28px;
+    --col-padding-mobile: 20px;
+    --button-padding: 1rem;
+    /* Button padding token */
+
+
+    /* ----------------------- */
+    /* Content Wrapper Padding */
+    /* ----------------------- */
+
+    --content-wrapper-inside-padding: 28px;
+    --content-wrapper-inside-padding-sm: 20px;
+    --container-padding: var(--col-gap);
+
+
+    /* ---- */
+    /* Gaps */
+    /* ---- */
+
+    --col-gap: max(1.75em, 1.75vw);
+    /* Column gap for mobile screens in the media queries below */
+
+    /* Site Navigation */
+
+    --nav-height: 96px;
+
+    /* Random */
+
+    --title-size: max(5em, 7.5vw);
+    --color-dark-rgb: 0, 0, 0;
+    
+
+}
+
+/* ----------------------------- */
+/* -------- BREAKPOINTS -------- */
+/* ----------------------------- */
+
+/* XL: 1121px - 1920px and above */
+@media (min-width: 1121px) {
+    /* Your styles for XL screens go here */
+    :root{
+    --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 4);
+}
+}
+
+/* Large: 881px - 1120px */
+@media (min-width: 881px) and (max-width: 1120px) {
+    /* Your styles for Large screens go here */
+    :root{
+        --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 3);
+    }
+}
+
+/* Medium: 601px - 880px */
+@media (min-width: 601px) and (max-width: 880px) {
+    /* Your styles for Medium screens go here */
+    :root{
+        --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 2);
+    }
+}
+
+/* Small: 320px - 600px */
+@media (min-width: 320px) and (max-width: 600px) {
+    /* Your styles for Small screens go here */
+    :root{
+        --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 1);
+        --col-gap: 1.25em;
+    }
+}
+
+/* --------------------------------- */
+/* -------- BACKGROUND GRID -------- */
+/* --------------------------------- */
+
+.grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 var(--col-gap);
+    display: flex;
+    justify-content: space-between;
+    z-index: 800;
+    pointer-events: none;
+    user-select: none;
+}
+
+.grid .grid-line {
+    width: 1px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: var(--color-border);
+}
+
+/* -------------------------------- */
+/* -------- FLEX ROW RULES -------- */
+/* -------------------------------- */
+
+.row-wrapper {
+    display: flex;
+    padding: var(--container-padding);
+}
+
+.row-inner {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* ----------------------------------- */
+/* -------- FLEX COLUMN RULES -------- */
+/* ----------------------------------- */
+
+.col-xl {
+    display: flex;
+    flex-direction: column;
+    gap: var(--col-gap);
+    width: var(--col-xl);
+    /* background-color: var(--gray-900); */
+    /* padding: var(--container-padding); */
+}
+
+.col-large {
+    display: flex;
+    flex-direction: column;
+    gap: var(--col-gap);
+}
+
+.col-medium {
+    display: flex;
+    flex-direction: column;
+    gap: var(--col-gap);
+}
+
+.col-small {
+    display: flex;
+    flex-direction: column;
+    width: var(--single-grid-col);
+    gap: var(--col-gap);
+}
+
+/* ---------------------------------- */
+/* -------- CONTENT WRAPPERS -------- */
+/* ---------------------------------- */
+
+.content-wrapper {
+    padding: 0 var(--container-padding);
+    z-index: 801;
+}
+
+.content-wrapper-large {}
+
+.content-wrapper-medium {}
+
+.content-wrapper-small {}
+
+/* ------------------------------------ */
+/* -------- CONTENT CONTAINERS -------- */
+/* ------------------------------------ */
+
+.items-container{
+    padding: 0;
+}
+
+/* ---------------------------- */
+/* -------- NAVIGATION -------- */
+/* ---------------------------- */
+
+.nav{
+    display: flex;
+    flex-flow: row nowrap;
+    position: sticky;
+    top: 0px;
+    height: var(--nav-height);
+    margin-bottom: calc(0px - var(--nav-height));
+    padding: 28px var(--container-padding);
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.00) 100%);
+    backdrop-filter: blur(4px);
+    z-index: 802;
+}
+
+.nav-items{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--col-gap);
+    align-items: center;
+}
+
+.nav-item{
+    display: inline-block;
+    padding: 0 16px;
+}
+
+.nav-button{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    background: rgba(92, 92, 92, 0.1);
+}
+
+/* ----------------------------- */
+/* -------- BODY BUTTON -------- */
+/* ----------------------------- */
+
+.btn-row-inner {
+    /* margin-left: calc(var(--col-gap) * -1); */
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    row-gap: var(--col-gap);
+}
+
+.btn .btn-click {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    padding: 0.9em var(--col-gap);
+    width: var(--single-grid-col);
+}
+
+.btn .btn-click .btn-line {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--color-border);
+    transition: var(--animation-primary) 0s;
+    border-radius: 0px;
+    transform: scale(0, 0) rotate(0.001deg);
+}
+
+.btn .btn-click .btn-line.left {
+    transform: scale(1, 1) rotate(0.001deg);
+    background-color: var(--primary-color);
+}
+
+.btn.inset {}
+
+.btn .btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25em;
+    z-index: 2;
+    transform: translateX(0) rotate(0.001deg);
+    width: 100%;
+}
+
+.btn .btn-content>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    margin-right: -0.3em;
+}
+
+.btn .btn-content>i svg {
+    width: 100%;
+    transform: translateX(0em) rotate(0.001deg);
+    /* transition: all var(--animation-primary); */
+}
+
+.btn .btn-content>i svg polyline {
+    stroke: var(--text-rev);
+}
+
+/* ---------- */
+/* TYPOGRAPHY */
+/* ---------- */
+
+.text-rev {
+    color: var(--text-rev);
+}

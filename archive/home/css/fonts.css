@@ -50,9 +50,10 @@
 /*------ Paragraph Styles ------*/
 /*------------------------------*/
 
-.title {
-    font-size: clamp(3.125rem, 9.96vw + 0.548rem, 12.5rem);
-    line-height: clamp(3.438rem, 10.956vw + 0.603rem, 13.75rem);
+.title{
+    font-weight: 800;
+    font-size: clamp(3.125rem, 16.556vw + -1.159rem, 12.5rem);
+    line-height: clamp(3.125rem, 16.556vw + -1.159rem, 12.5rem);
     letter-spacing: -0.025em;
 }
 
@@ -95,7 +96,7 @@
     color: #fffded;
 }
 
-.heading-1 {
+.heading-1{
     color: #FFFDED;
     /* font-weight: 500; */
     font-size: clamp(1.25rem, 0.883vw + 1.022rem, 1.75rem);
@@ -138,11 +139,6 @@
     line-height: clamp(0.844rem, 0.346vw + 0.754rem, 1.031rem);
 }
 
-.body-copy-xl {
-    font-size: var(--body-copy-xl);
-    line-height: var(--body-copy-line-height-xl);
-    letter-spacing: 0.1rem;
-}
 
 /*-------------------------*/
 /*------ Font Styles ------*/
@@ -313,14 +309,14 @@
 /*------ Font Styling Classes ------*/
 /*---------------------------------*/
 
-.center {
+.center{
     text-align: center;
 }
 
-.text-right {
+.text-right{
     text-align: right;
 }
 
-.text-left {
+.text-left{
     text-align: left;
 }
