@@ -25,8 +25,10 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    overflow-x: hidden;
+}
+
+main{
+    overflow: hidden;
 }
 
 /* ------------------------------ */
@@ -36,7 +38,7 @@ body {
 :root {
 
     /* ---------- */
-    /* Colors */
+    /*-- Colors --*/
     /* ---------- */
 
     --primary-color: #E10600;
@@ -152,6 +154,11 @@ body {
     --title-size: max(5em, 7.5vw);
     --color-dark-rgb: 0, 0, 0;
     
+    /* Border Radius */
+
+    --border-radius-small: 5px;
+    --border-radius-medium: 12px;
+    --border-radius-large: 16px;
 
 }
 
@@ -164,6 +171,7 @@ body {
     /* Your styles for XL screens go here */
     :root{
     --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 4);
+    --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 0.75);
 }
 }
 
@@ -172,6 +180,7 @@ body {
     /* Your styles for Large screens go here */
     :root{
         --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 3);
+        --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 0.666);
     }
 }
 
@@ -180,6 +189,7 @@ body {
     /* Your styles for Medium screens go here */
     :root{
         --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 2);
+        --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 1);
     }
 }
 
@@ -188,6 +198,7 @@ body {
     /* Your styles for Small screens go here */
     :root{
         --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 1);
+        --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 1);
         --col-gap: 1.25em;
     }
 }

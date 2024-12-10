@@ -18,16 +18,12 @@
     .intro-content{
         width: var(--col-span-all);
     }
-}
 
-
-/* Medium: 601px - 880px */
-@media (min-width: 601px) and (max-width: 880px) {
-    /* Your styles for Medium screens go here */
     .row-inner.hero-content{
         flex-direction: column-reverse;
     }
 }
+
 
 /* Small: 320px - 600px */
 @media (min-width: 320px) and (max-width: 600px) {
@@ -89,6 +85,10 @@
 }
 
 .logo-col{
+    display: flex;
+    flex-direction: column;
+    width: var(--single-grid-col);
+    gap: var(--col-gap);
     padding: var(--container-padding) 0;
     border: solid var(--color-border);
     border-width: 1px 0;
@@ -96,6 +96,14 @@
 
 img.customer-logo {
     height: 48px;
+}
+
+/* Small: 320px - 600px */
+@media (min-width: 320px) and (max-width: 600px) {
+    /* Your styles for Small screens go here */
+    .logo-col{
+        width: var(--col-medium);
+    }
 }
 
 /* Our Philosophy Section */
@@ -123,3 +131,97 @@ img.customer-logo {
 .col-philosophy{
     width: var(--col-span-2);
 }
+
+/* Medium & Small: 320px - 880px */
+@media (min-width: 320px) and (max-width: 880px) {
+    /* Your styles for Medium screens go here */
+    .philosophy-wrapper{
+        flex-direction: column;
+        gap: calc(var(--col-gap) * 2);
+    }
+
+    .col-philosophy{
+        width: var(--col-span-all);
+    }
+
+    .col-monogram{
+        width: var(--col-span-all);
+    }
+}
+
+
+/* Services MArquee Section */
+
+.col-marquee{
+    display: flex;
+    flex-flow: row nowrap;
+    width: var(--col-span-all);
+    overflow-x: clip;
+    padding-top: calc(var(--container-padding) * 4);
+    padding-bottom: calc(var(--container-padding) * 4);
+}
+
+.marquee-text-track{
+    display: flex;
+    width: max-content;
+    padding-left: var(--col-gap);
+    gap: var(--col-gap);
+    animation: marquee-move-text 40s linear infinite;
+    animation-play-state: pause;
+}
+
+.marquee-text{
+    white-space: nowrap;
+}
+
+@keyframes marquee-move-text{
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Recent Work Section */
+
+.recent-work-heading{
+    display: flex;
+    width: var(--col-span-all);
+    border: solid var(--color-border);
+    border-width: 0 0 1px 0;
+    padding: var(--col-gap) 0;
+}
+
+/* Case Study Cards */
+
+.case-study-wrapper{
+    flex-flow: row wrap;
+}
+
+.case-study-col{
+    display: flex;
+    flex-flow: column;
+    width: var(--single-grid-col);
+    padding: var(--col-gap);
+    gap: calc(var(--col-gap) / 2);
+}
+
+.case-study-card{
+    display: flex;
+    justify-content: center;
+    max-height: 560px;
+    overflow: hidden;
+    border-radius: var(--border-radius-medium);
+    aspect-ratio: 41 / 56;
+}
+
+.case-study-card img{
+    max-height: 100%;
+    width: auto;
+    margin: auto;
+}
+
+.case-study-details{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
