@@ -5,7 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'DM Sans', Helvetica, sans-serif;
+    font-family: var(--body-font-family);
     scroll-behavior: smooth;
 }
 
@@ -25,10 +25,33 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 main{
-    overflow: hidden;
+}
+
+a{
+    color: var(--primary-color);
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+a.how-we-work-card{
+    color: black;
+}
+
+hr {
+    display: block;
+    position: relative;
+    border: 0;
+    height: 1px;
+    background-color: var(--color-border);
+    width: var(--col-span-all);
+    z-index: 1000;
 }
 
 /* ------------------------------ */
@@ -41,8 +64,13 @@ main{
     /*-- Colors --*/
     /* ---------- */
 
-    --primary-color: #E10600;
     /* Primary brand color token */
+    --primary-color: #E10600;
+    /* Secondary brand color token */
+    --secondary-color: #005ECC;
+    /* Tertiary brand color token */
+    --tertiary-color: #E10600;
+    
 
     /* Light grays */
     --gray-0: #ffffff;
@@ -78,17 +106,6 @@ main{
     --color-border-rgb: 159, 161, 163;
 
     --text-rev: var(--gray-0);
-
-
-    /* --------- */
-    /* Font Size */
-    /* --------- */
-
-    --body-copy-xl: clamp(1rem, 1.515vw + 0.432rem, 2.25rem);
-    --body-copy-line-height-xl: clamp(1.5rem, 2.545vw + 0.545rem, 3.6rem);
-
-    --font-size-medium: 16px;
-    /* Medium text size token */
 
 
     /* ------------------ */
@@ -142,7 +159,10 @@ main{
     /* Gaps */
     /* ---- */
 
+    --col-gap-l: max(3.5em, 3.5vw);
     --col-gap: max(1.75em, 1.75vw);
+    --col-gap-sm: max(0.875em, 0.875vw);
+    --col-gap-xs: max(0.4375em, 0.4375vw);
     /* Column gap for mobile screens in the media queries below */
 
     /* Site Navigation */
@@ -265,6 +285,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: var(--col-gap);
+    width: var(--col-span-2);
 }
 
 .col-small {
@@ -301,7 +322,7 @@ main{
 /* -------- NAVIGATION -------- */
 /* ---------------------------- */
 
-.nav{
+/* .nav{
     display: flex;
     flex-flow: row nowrap;
     position: sticky;
@@ -315,8 +336,36 @@ main{
     border-bottom: 1px solid var(--color-border);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.00) 100%);
     backdrop-filter: blur(4px);
-    z-index: 802;
+    z-index: 9999;
+} */
+
+.nav {
+    display: flex;
+    flex-flow: row nowrap;
+    position: sticky;
+    top: 0px;
+    height: var(--nav-height);
+    margin-bottom: calc(0px - var(--nav-height));
+    padding: 28px var(--container-padding);
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.00) 100%);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
 }
+
+.nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Align with the bottom of the nav */
+    height: 1px; /* Thickness of the line */
+    background-color: var(--color-border); /* Color of the line */
+    z-index: -1; /* Adjust z-index as needed */
+}
+
 
 .nav-items{
     display: flex;

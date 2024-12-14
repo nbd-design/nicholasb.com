@@ -57,10 +57,10 @@
 }
 
 .display-0 {
-    font-size: clamp(3rem, 4.619vw + 1.805rem, 7.5rem);
+    font-size: clamp(3rem, 4.619vw + 1.805rem, 6.5rem);
     line-height: clamp(3.9rem, 3.972vw + 2.872rem, 7.875rem);
     letter-spacing: -0.05em;
-    color: #fffded;
+    /* color: #fffded; */
 }
 
 .display-1 {
@@ -96,7 +96,7 @@
 }
 
 .heading-1 {
-    color: #FFFDED;
+    /* color: #FFFDED; */
     /* font-weight: 500; */
     font-size: clamp(1.25rem, 0.883vw + 1.022rem, 1.75rem);
     line-height: clamp(1.875rem, 1.325vw + 1.532rem, 2.625rem);
@@ -323,4 +323,8 @@
 
 .text-left {
     text-align: left;
+}
+
+.period{
+    color: var(--primary-color);
 }
