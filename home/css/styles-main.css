@@ -69,7 +69,7 @@ hr {
     /* Secondary brand color token */
     --secondary-color: #005ECC;
     /* Tertiary brand color token */
-    --tertiary-color: #E10600;
+    --tertiary-color: #FFC700;
     
 
     /* Light grays */
@@ -159,6 +159,7 @@ hr {
     /* Gaps */
     /* ---- */
 
+    --col-gap-xl: max(5.25em, 5.25vw);
     --col-gap-l: max(3.5em, 3.5vw);
     --col-gap: max(1.75em, 1.75vw);
     --col-gap-sm: max(0.875em, 0.875vw);
@@ -192,6 +193,8 @@ hr {
     :root{
     --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 4);
     --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 0.75);
+    --col-span-2121: calc((99.99vw - (var(--col-gap) * 2)) / 2);
+    --col-span-2221: calc((99.99vw - (var(--col-gap) * 2)) / 2);
 }
 }
 
@@ -201,6 +204,8 @@ hr {
     :root{
         --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 3);
         --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 0.666);
+        --col-span-2121: calc((99.99vw - (var(--col-gap) * 2)) / 3);
+        --col-span-2221: calc((99.99vw - (var(--col-gap) * 2)) * 0.666);
     }
 }
 
@@ -210,6 +215,8 @@ hr {
     :root{
         --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 2);
         --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 1);
+        --col-span-2121: calc((99.99vw - (var(--col-gap) * 2)) * 1);
+        --col-span-2221: calc(99.99vw - (var(--col-gap) * 2));
     }
 }
 
@@ -219,6 +226,8 @@ hr {
     :root{
         --single-grid-col: calc((99.99vw - (var(--col-gap) * 2)) / 1);
         --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 1);
+        --col-span-2121: calc((99.99vw - (var(--col-gap) * 2)) * 1);
+        --col-span-2221: calc(99.99vw - (var(--col-gap) * 2));
         --col-gap: 1.25em;
     }
 }
