@@ -4,11 +4,10 @@
 <head>
     <title>nbd. | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="css/styles-main.css">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/font-import.css">
-    <link rel="stylesheet" type="text/css" href="css/typography.css">
+    <link rel="stylesheet" type="text/css" href="css/type-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/global-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
@@ -21,6 +20,15 @@
     <div class="grid"></div>
     <!-- Main Body Content -->
     <main>
+        <!-- Off Scrren Menu -->
+         <div class="mobile-menu">
+            <ul class="display-m text-rev">
+                <li class="mm-item wipe">Work</li>
+                <li class="mm-item wipe">Services</li>
+                <li class="mm-item wipe">Contact</li>
+                <li class="mm-item wipe">About</li>
+            </ul>
+         </div>
         <!-- Global Navigation -->
         <nav class="nav">
             <div class="logo">
@@ -52,26 +60,33 @@
                         <a href="work.html" class="body-s text-rev">Work</a href="">
                     </li>
                     <li class="nav-item">
+                        <a href="contact.html" class="body-s text-rev">Services</a href="">
+                    </li>
+                    <li class="nav-item">
                         <a href="contact.html" class="body-s text-rev">Contact</a href="">
                     </li>
                     <li class="nav-item">
                         <a href="about.html" class="body-s text-rev">About</a href="">
                     </li>
                 </ul>
-                <div class="nav-button">
-                    <p class="text-rev">Let's Work Together</p>
+                <div class="nav-button wipe">
+                    <a href="contact.html"><p class="text-rev">Let's Work Together</p></a>
+                </div>
+                <div class="hamburger-menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                 </div>
             </div>
         </nav>
         <!-- Hero Section -->
         <div class="row-wrapper hero">
-            <div class="bg-gradient-wrapper">
-                <div class="bg-gradient-red"></div>
-            </div>
+            <!-- <div class="bg-gradient-wrapper"> -->
+                <!-- <div class="bg-gradient-red"></div> -->
+            <!-- </div> -->
             <div class="col-xl hero-content">
                 <div class="content-wrapper">
-                    <h2 class="display-xl text-rev">Say goodbye to boring design<span
-                            style="color: var(--primary-color);">.</span></h2>
+                    <h2 class="display-xl text-rev">Say goodbye to boring design<span class="period">.</span></h2>
                 </div>
                 <div class="row-inner hero-content">
                     <div class="btn-row-inner">
@@ -177,7 +192,7 @@
             <!-- Case Study Cards -->
             <div class="row-wrapper case-study-wrapper">
                 <!-- CS 01 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-01">
                     <div class="case-study-card">
                         <img src="../home/images/polimorphic-case-study_648x648.jpg" />
                     </div>
@@ -186,7 +201,7 @@
                     </div>
                 </div>
                 <!-- CS 02 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-02">
                     <div class="case-study-card">
                         <img src="../home/images/cartegraph-brand-guide_648x648.jpg" />
                     </div>
@@ -195,7 +210,7 @@
                     </div>
                 </div>
                 <!-- CS 03 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-03">
                     <div class="case-study-card">
                         <img src="../home/images/photo-logica-case-study_648x648.jpg" />
                     </div>
@@ -204,7 +219,7 @@
                     </div>
                 </div>
                 <!-- CS 04 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-04">
                     <div class="case-study-card">
                         <img src="../home/images/case-study_dccb-maps-design-system.jpg" />
                     </div>
@@ -213,7 +228,7 @@
                     </div>
                 </div>
                 <!-- CS 05 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-05">
                     <div class="case-study-card">
                         <img src="../home/images/case-study_dccb-maps-design-system.jpg" />
                     </div>
@@ -222,7 +237,7 @@
                     </div>
                 </div>
                 <!-- CS 06 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-06">
                     <div class="case-study-card">
                         <img src="../home/images/case-study_uomo-branding.jpg" />
                     </div>
@@ -231,7 +246,7 @@
                     </div>
                 </div>
                 <!-- CS 07 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-07">
                     <div class="case-study-card">
                         <img src="../home/images/case-study_cartecon-event-branding.jpg" />
                     </div>
@@ -240,7 +255,7 @@
                     </div>
                 </div>
                 <!-- CS 08 -->
-                <div class="case-study-col">
+                <div class="case-study-col cs-08">
                     <div class="case-study-card">
                         <img src="../home/images/case-study_uomo-branding.jpg" />
                     </div>
@@ -266,7 +281,7 @@
                         </h2>
                     </div>
                     <div class="services-row-inner">
-                        <div class="col-small">
+                        <div class="col-small sc services-01">
                             <div class="content-wrapper services-col">
                                 <h3 class="heading-m text-rev">Branding & Identity</h3>
                                 <p class="body-sm text-rev">We’ll uncover your brand’s essence, develop a
@@ -274,7 +289,7 @@
                                     graphics, we’ve got you covered.</p>
                             </div>
                         </div>
-                        <div class="col-small">
+                        <div class="col-small sc services-02">
                             <div class="content-wrapper services-col">
                                 <h3 class="heading-m text-rev">Physical & Print</h3>
                                 <p class="body-sm text-rev">We can craft anything from interior branding,
@@ -282,7 +297,7 @@
                                     materials to go with it. </p>
                             </div>
                         </div>
-                        <div class="col-small">
+                        <div class="col-small sc services-03">
                             <div class="content-wrapper services-col">
                                 <h3 class="heading-m text-rev">Video & Photo</h3>
                                 <p class="body-sm text-rev">We capture custom portrait and product
@@ -290,7 +305,7 @@
                                     digital and in print.</p>
                             </div>
                         </div>
-                        <div class="col-small">
+                        <div class="col-small sc services-04">
                             <div class="content-wrapper services-col">
                                 <h3 class="heading-m text-rev">Web & Digital</h3>
                                 <p class="body-sm text-rev">Get custom design and full-stack development
@@ -438,10 +453,17 @@
                 </div>
             </div>
     </main>
+    <hr class="footer-hr">
     <footer>
-        <script src=" js/grid-layout.js">
-        </script>
+        <script src="../home/js/grid-layout.js"></script>
+        <script src="../home/js/gsap/gsap.min.js"></script>
+        <script src="../home/js/gsap/ScrollTrigger.min.js"></script>
+        <script src="../home/js/page-animations.js"></script>
     </footer>
 </body>
 
 </html>
+
+
+
+

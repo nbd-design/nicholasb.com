@@ -71,7 +71,7 @@
     --gradient-size: calc(var(--title-size) * 12);
     width: var(--gradient-size);
     height: var(--gradient-size);
-    background: radial-gradient(circle, var(--primary-color) 0%, rgba(var(--color-dark-rgb), 0) 55%);
+    background: radial-gradient(circle, var(--gray-700) 0%, rgba(var(--color-dark-rgb), 0) 55%);
     position: absolute;
     pointer-events: none;
     border-radius: 50%;
@@ -245,6 +245,32 @@ img.customer-logo {
     justify-content: space-between;
 }
 
+.cs-01{
+    transform: translateY(160px);
+}
+.cs-02 {
+    transform: translateY(240px);
+}
+.cs-03{
+    transform: translateY(320px);
+}
+.cs-04{
+    transform: translateY(400px);
+}
+.cs-05{
+    transform: translateY(240px);
+}
+.cs-06 {
+    transform: translateY(320px);
+}
+.cs-07{
+    transform: translateY(400px);
+}
+.cs-08{
+    transform: translateY(480px);
+}
+
+
 /* -------------------------- */
 /* Recent Work Button Section */
 /* -------------------------- */
@@ -336,7 +362,7 @@ img.customer-logo {
     align-items: center;
     justify-content: center;
     padding-top: calc(var(--container-padding) * 4);
-    padding-bottom: calc(var(--container-padding) * 4);
+    padding-bottom: calc(var(--container-padding) * 8);
 }
 
 .services-bg {
@@ -352,7 +378,7 @@ img.customer-logo {
 .services-wrapper {
     position: relative;
     flex-flow: column;
-    gap: calc(var(--col-gap) * 4);
+    gap: calc(var(--col-gap) * 3);
 }
 
 .services-row-inner {
@@ -368,6 +394,19 @@ img.customer-logo {
     flex-direction: column;
     width: var(--single-grid-col);
     gap: var(--col-gap-xs);
+}
+
+.services-01{
+    transform: translateY(80px);
+}
+.services-02{
+    transform: translateY(240px);
+}
+.services-03{
+    transform: translateY(400px);
+}
+.services-04{
+    transform: translateY(560px);
 }
 
 /* ----------- */
@@ -606,4 +645,9 @@ img.customer-logo {
     display: flex;
     flex-flow: column;
     gap: var(--col-gap-sm); 
+}
+
+.footer-hr{
+    margin-bottom: var(--col-gap);
+    width: 100%;
 }

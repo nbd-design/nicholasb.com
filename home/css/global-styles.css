@@ -102,11 +102,12 @@ hr {
     --gray-1000: #000000;
     /* Pure black */
 
+
+    /* ------------------ */
+    /* Border Color Rules */
+    /* ------------------ */
     --color-border: rgba(var(--color-border-rgb), 0.225);
     --color-border-rgb: 159, 161, 163;
-
-    --text-rev: var(--gray-0);
-
 
     /* ------------------ */
     /* Column Width Rules */
@@ -169,11 +170,7 @@ hr {
     /* Site Navigation */
 
     --nav-height: 96px;
-
-    /* Random */
-
-    --title-size: max(5em, 7.5vw);
-    --color-dark-rgb: 0, 0, 0;
+    --nav-height-sm: 64px;
     
     /* Border Radius */
 
@@ -181,7 +178,15 @@ hr {
     --border-radius-medium: 12px;
     --border-radius-large: 16px;
 
+    /* Miscellaneous */
+
+    --title-size: max(5em, 7.5vw);
+    --color-dark-rgb: 0, 0, 0;
+    --text-rev: var(--gray-0);
+
 }
+
+
 
 /* ----------------------------- */
 /* -------- BREAKPOINTS -------- */
@@ -331,23 +336,6 @@ hr {
 /* -------- NAVIGATION -------- */
 /* ---------------------------- */
 
-/* .nav{
-    display: flex;
-    flex-flow: row nowrap;
-    position: sticky;
-    top: 0px;
-    height: var(--nav-height);
-    margin-bottom: calc(0px - var(--nav-height));
-    padding: 28px var(--container-padding);
-    align-self: stretch;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--color-border);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.00) 100%);
-    backdrop-filter: blur(4px);
-    z-index: 9999;
-} */
-
 .nav {
     display: flex;
     flex-flow: row nowrap;
@@ -388,6 +376,15 @@ hr {
     padding: 0 16px;
 }
 
+.nav-item a{
+    transition: color ease-in-out 0.2s;
+}
+
+.nav-item a:hover {
+    color: var(--primary-color);
+    transition: color ease-in-out 0.2s;
+}
+
 .nav-button{
     display: flex;
     padding: 12px 24px;
@@ -397,7 +394,118 @@ hr {
     border-radius: 5px;
     border: 1px solid var(--color-border);
     background: rgba(92, 92, 92, 0.1);
+    overflow: hidden;
+    transition: color ease-in-out 0.2s;
 }
+
+.nav-button:hover a p{
+    color: var(--gray-1000);
+    transition: color ease-in-out 0.2s;
+}
+
+/* ----------------------------- */
+/* -------- Mobile Menu -------- */
+/* ----------------------------- */
+
+.mobile-menu {
+    background-color: var(--gray-1000);
+    height: 100vh;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    transition: width 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    width: 100vw;
+    transition: width 0.5s ease-in-out;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: var(--col-gap);
+}
+
+.mm-item {
+    width: fit-content;
+    padding: 0.05em;
+    transition: color ease-in-out 0.25s;
+}
+
+.no-scroll {
+    overflow: hidden;
+  }
+  
+
+.mm-item:hover{
+    color: var(--gray-900);
+    transition: color ease-in-out 0.25s;
+}
+
+.hamburger-menu-icon {
+    display: none;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger-menu-icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 1.5px;
+    background-color: var(--gray-400);
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu-icon span:nth-child(1) {
+    top: 25%;
+}
+
+.hamburger-menu-icon span:nth-child(3) {   
+    top: 75%;
+}
+
+.hamburger-menu-icon.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}   
+
+.hamburger-menu-icon.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Medium: 601px - 880px */
+@media (min-width: 320px) and (max-width: 880px) {
+    /* Your styles for Medium screens go here */
+    .mobile-menu{
+        display: flex;
+    }
+
+    .hamburger-menu-icon{
+        display: inline-flex;
+    }
+
+    .nav-items ul{
+        display: none;
+    }
+}
+
+
 
 /* ----------------------------- */
 /* -------- BODY BUTTON -------- */
@@ -472,4 +580,8 @@ hr {
 
 .text-rev {
     color: var(--text-rev);
+}
+
+.period {
+    color: var(--primary-color);
 }

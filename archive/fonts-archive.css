@@ -1,0 +1,330 @@
+@font-face {
+    font-family: 'Sentinel';
+    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Black-Pro.otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sentinel';
+    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Bold-Pro.otf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sentinel';
+    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Semibold-Pro.otf');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sentinel';
+    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Medium-Pro.otf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sentinel';
+    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Book-Pro.otf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sentinel';
+    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Light-Pro.otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*------------------------------*/
+/*------ Paragraph Styles ------*/
+/*------------------------------*/
+
+.title {
+    font-size: clamp(3.125rem, 9.96vw + 0.548rem, 12.5rem);
+    line-height: clamp(3.438rem, 10.956vw + 0.603rem, 13.75rem);
+    letter-spacing: -0.025em;
+}
+
+.display-0 {
+    font-size: clamp(3rem, 4.619vw + 1.805rem, 6.5rem);
+    line-height: clamp(3.9rem, 3.972vw + 2.872rem, 7.875rem);
+    letter-spacing: -0.05em;
+    /* color: #fffded; */
+}
+
+.display-1 {
+    font-size: clamp(2.75rem, 2.771vw + 2.033rem, 4.25rem);
+    line-height: clamp(3.575rem, 2.032vw + 3.049rem, 4.675rem);
+    letter-spacing: -0.3px;
+    color: #fffded;
+}
+
+.display-2 {
+    font-size: clamp(2.25rem, 2.309vw + 1.652rem, 3.5rem);
+    line-height: clamp(2.925rem, 1.709vw + 2.483rem, 3.85rem);
+    letter-spacing: -0.2px;
+    color: #fffded;
+}
+
+.display-3 {
+    font-size: clamp(2rem, 1.386vw + 1.641rem, 2.75rem);
+    line-height: clamp(2.6rem, 0.785vw + 2.397rem, 3.025rem);
+    color: #fffded;
+}
+
+.display-4 {
+    font-size: clamp(1.75rem, 1.039vw + 1.481rem, 2.313rem);
+    line-height: clamp(2.275rem, 0.497vw + 2.147rem, 2.544rem);
+    color: #fffded;
+}
+
+.display-5 {
+    font-size: clamp(1.625rem, 0.693vw + 1.446rem, 2rem);
+    line-height: clamp(2.113rem, 0.162vw + 2.071rem, 2.2rem);
+    color: #fffded;
+}
+
+.heading-1 {
+    /* color: #FFFDED; */
+    /* font-weight: 500; */
+    font-size: clamp(1.25rem, 0.883vw + 1.022rem, 1.75rem);
+    line-height: clamp(1.875rem, 1.325vw + 1.532rem, 2.625rem);
+    margin-bottom: 32px;
+}
+
+.p-large {
+    font-family: "DM Sans", sans-serif;
+    /* font-weight: 400; */
+    font-style: normal;
+    font-size: clamp(1.125rem, 0.462vw + 1.005rem, 1.375rem);
+    line-height: clamp(1.744rem, 0.462vw + 1.624rem, 1.994rem);
+    letter-spacing: -0.25px;
+    margin-bottom: 32px;
+}
+
+.p-reg {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 0.231vw + 0.94rem, 1.125rem);
+    line-height: clamp(1.5rem, 0.45vw + 1.383rem, 1.744rem);
+    letter-spacing: -0.25px;
+}
+
+.p-small {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.875rem, 0.231vw + 0.815rem, 1rem);
+    line-height: clamp(1.243rem, 0.476vw + 1.119rem, 1.5rem);
+}
+
+.p-tiny {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.563rem, 0.231vw + 0.503rem, 0.688rem);
+    line-height: clamp(0.844rem, 0.346vw + 0.754rem, 1.031rem);
+}
+
+.body-copy-xl {
+    font-size: var(--body-copy-xl);
+    line-height: var(--body-copy-line-height-xl);
+    letter-spacing: 0.1rem;
+}
+
+/*-------------------------*/
+/*------ Font Styles ------*/
+/*-------------------------*/
+
+/*-------- DM Mono --------*/
+
+.dm-mono-light {
+    font-family: "DM Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.dm-mono-regular {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-mono-medium {
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dm-mono-bold {
+    font-family: "DM Mono", monospace;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.dm-mono-light-italic {
+    font-family: "DM Mono", monospace;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.dm-mono-regular-italic {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.dm-mono-medium-italic {
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+/*-------- DM Sans --------*/
+
+.dm-sans-thin {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.dm-sans-extra-light {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.dm-sans-light {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.dm-sans-regular {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-sans-medium {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dm-sans-semi-bold {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.dm-sans-bold {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.dm-sans-extra-bold {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.dm-sans-black {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.dm-sans-extra-black {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+/*-------- Sentinel Pro --------*/
+
+.sentinel-pro-light {
+    font-family: "Sentinel", serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -0.35px;
+}
+
+.sentinel-pro-book {
+    font-family: "Sentinel", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.35px;
+}
+
+.sentinel-pro-medium {
+    font-family: "Sentinel", serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -0.35px;
+}
+
+.sentinel-pro-semi-bold {
+    font-family: "Sentinel", serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -0.35px;
+}
+
+.sentinel-pro-bold {
+    font-family: "Sentinel", serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.35px;
+}
+
+.sentinel-pro-black {
+    font-family: 'Sentinel', serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: -0.35px;
+}
+
+/*----------------------------------*/
+/*------ Font Styling Classes ------*/
+/*---------------------------------*/
+
+.center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.period{
+    color: var(--primary-color);
+}

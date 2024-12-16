@@ -35,4 +35,19 @@ function createGridLines() {
     createGridLines();
     window.addEventListener('resize', createGridLines);
   });
+
+
+
+  const hamburgerMenuIcon = document.querySelector('.hamburger-menu-icon');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuItem = document.querySelector('.mm-item');
+const body = document.body; // Get the body element
+
+hamburgerMenuIcon.addEventListener('click', () => {
+  hamburgerMenuIcon.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  mobileMenuItem.classList.toggle('active');
   
+  // Toggle no-scroll class on the body to disable/enable scrolling
+  body.classList.toggle('no-scroll');
+});
