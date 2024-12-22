@@ -29,6 +29,8 @@
     --body-copy-xs: clamp(0.875rem, 0.125vw + 0.85rem, 1rem);
     --body-copy-xxs: clamp(0.625rem, 0.188vw + 0.588rem, 0.813rem);
 
+    --mobile-menu-font-size: clamp(4.5rem, 6.75vw + 1.6rem, 10rem);
+
 
     /* Font Weight */
     --display-font-weight: 700;
@@ -46,10 +48,6 @@
     --display-letter-spacing: -0.06em;
     --heading-letter-spacing: -0.04em;
     --body-letter-spacing: -0.02em;
-
-
-    --font-size-medium: 16px;
-    /* Medium text size token */
 }
 
 /* --- DISPLAY --- */
@@ -61,6 +59,7 @@
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.05em;
+    color: var(--text-theme-color)
 }
 
 .display-l {
@@ -70,6 +69,7 @@
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
+    color: var(--text-theme-color)
 }
 
 .display-m {
@@ -79,6 +79,7 @@
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
+    color: var(--text-theme-color)
 }
 
 .display-sm {
@@ -88,6 +89,7 @@
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
+    color: var(--text-theme-color)
 }
 
 .display-xs {
@@ -97,6 +99,7 @@
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
+    color: var(--text-theme-color)
 }
 
 /* --- HEADINGS --- */
@@ -108,6 +111,7 @@
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
     font-weight: var(--heading-font-weight);
+    color: var(--text-theme-color)
 }
 
 .heading-l {
@@ -117,6 +121,7 @@
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
     font-weight: var(--heading-font-weight);
+    color: var(--text-theme-color)
 }
 
 .heading-m {
@@ -126,6 +131,7 @@
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
     font-weight: var(--heading-font-weight);
+    color: var(--text-theme-color)
 }
 
 .heading-sm {
@@ -135,6 +141,7 @@
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
     font-weight: var(--heading-font-weight);
+    color: var(--text-theme-color)
 }
 
 .heading-xs {
@@ -144,6 +151,7 @@
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
     font-weight: var(--heading-font-weight);
+    color: var(--text-theme-color)
 }
 
 /* --- BODY --- */
@@ -154,6 +162,7 @@
     line-height: var(--body-line-height);
     font-weight: var(--body-font-weight);
     letter-spacing: var(--body-letter-spacing);
+    color: var(--text-theme-color)
 }
 
 .body-l {
@@ -162,6 +171,7 @@
     line-height: var(--body-line-height);
     font-weight: var(--body-font-weight);
     letter-spacing: var(--body-letter-spacing);
+    color: var(--text-theme-color)
 }
 
 .body-m {
@@ -170,6 +180,7 @@
     line-height: var(--body-line-height);
     font-weight: var(--body-font-weight);
     letter-spacing: var(--body-letter-spacing);
+    color: var(--text-theme-color)
 }
 
 .body-sm {
@@ -178,6 +189,7 @@
     line-height: var(--body-line-height);
     font-weight: var(--body-font-weight);
     letter-spacing: var(--body-letter-spacing);
+    color: var(--text-theme-color)
 }
 
 .body-xs {
@@ -186,6 +198,7 @@
     line-height: var(--body-line-height);
     font-weight: var(--body-font-weight);
     letter-spacing: var(--body-letter-spacing);
+    color: var(--text-theme-color)
 }
 
 .body-xxs {
@@ -194,4 +207,5 @@
     line-height: var(--body-line-height);
     font-weight: var(--body-font-weight);
     letter-spacing: var(--body-letter-spacing);
+    color: var(--text-theme-color)
 }

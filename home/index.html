@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
 
 <head>
     <title>nbd. | Home</title>
@@ -16,19 +16,24 @@
 </head>
 
 <body>
+    <!-- Preloader Page -->
+    <!-- Preloader Page -->
+    <div class="preloader">
+        <img class="preloader-logo" src="../home/images/nbd-emblem-white.svg" />
+    </div>
     <!-- Background Grid -->
     <div class="grid"></div>
     <!-- Main Body Content -->
     <main>
         <!-- Off Scrren Menu -->
-         <div class="mobile-menu">
-            <ul class="display-m text-rev">
+        <div class="mobile-menu">
+            <ul class="display-m">
                 <li class="mm-item wipe">Work</li>
                 <li class="mm-item wipe">Services</li>
                 <li class="mm-item wipe">Contact</li>
                 <li class="mm-item wipe">About</li>
             </ul>
-         </div>
+        </div>
         <!-- Global Navigation -->
         <nav class="nav">
             <div class="logo">
@@ -36,16 +41,16 @@
                     <g clip-path="url(#clip0_1078_1650)">
                         <path
                             d="M0 31.4477V8.2967H6.02549L6.57705 12.0138C7.28186 10.7312 8.27915 9.69617 9.56616 8.91436C10.8531 8.13255 12.4187 7.74304 14.2573 7.74304C16.1906 7.74304 17.8174 8.15759 19.1351 8.98114C20.4527 9.81024 21.4556 10.9955 22.1464 12.5424C22.8373 14.0921 23.1799 15.9812 23.1799 18.2182V31.4477H16.3299V18.8609C16.3299 17.1776 15.9677 15.8672 15.2462 14.9296C14.5247 13.9975 13.3853 13.5301 11.8226 13.5301C10.9005 13.5301 10.0648 13.7555 9.31265 14.1978C8.5633 14.643 7.97271 15.2746 7.54369 16.1064C7.11472 16.93 6.90023 17.926 6.90023 19.089V31.4477H0Z"
-                            fill="white" />
+                            fill="var(--body-bg-color-rev)" />
                         <path
                             d="M40.2921 32C39.1555 32 38.1359 31.8609 37.2334 31.5827C36.328 31.3072 35.5313 30.9177 34.8405 30.4113C34.1496 29.9078 33.559 29.3346 33.0687 28.6891L32.2887 31.4463H26.1713V0H33.0687V11.328C33.8069 10.2874 34.7568 9.42492 35.9213 8.75162C37.0885 8.0811 38.526 7.74445 40.2447 7.74445C42.3619 7.74445 44.2534 8.27308 45.9248 9.32755C47.5962 10.3848 48.9222 11.826 49.9056 13.6484C50.8862 15.4679 51.3764 17.5602 51.3764 19.9195C51.3764 22.2149 50.8862 24.2793 49.9056 26.1183C48.9222 27.9574 47.6046 29.393 45.9499 30.4336C44.2924 31.4742 42.4092 32 40.2921 32ZM38.59 25.9792C39.6931 25.9792 40.6821 25.7177 41.5568 25.1974C42.4315 24.6772 43.114 23.9649 43.6015 23.0635C44.0918 22.162 44.3397 21.1131 44.3397 19.9195C44.3397 18.7204 44.0918 17.6576 43.6015 16.7255C43.114 15.7907 42.4315 15.0645 41.5568 14.5387C40.6821 14.0184 39.6931 13.7596 38.59 13.7596C37.4562 13.7596 36.4506 14.0295 35.5759 14.5665C34.7012 15.1007 34.0186 15.8241 33.5312 16.7255C33.0381 17.627 32.7929 18.6926 32.7929 19.9195C32.7929 21.0797 33.0381 22.1314 33.5312 23.0635C34.0186 23.9955 34.7012 24.7189 35.5759 25.2197C36.4506 25.7288 37.4562 25.9792 38.59 25.9792Z"
-                            fill="white" />
+                            fill="var(--body-bg-color-rev)" />
                         <path
                             d="M64.2088 32C62.153 32 60.2893 31.4742 58.6179 30.4336C56.9465 29.393 55.6288 27.963 54.6622 26.1406C53.6983 24.3182 53.2136 22.2427 53.2136 19.9195C53.2136 17.5602 53.7039 15.4679 54.6845 13.6484C55.6678 11.826 57.0105 10.3848 58.7098 9.32755C60.4119 8.27308 62.3062 7.74445 64.3927 7.74445C65.9833 7.74445 67.3818 8.02545 68.5769 8.59025C69.7719 9.16061 70.7553 9.97858 71.5213 11.0498V0H78.4188V31.4463H72.3013L71.5213 28.461C71.0589 29.1065 70.5018 29.6935 69.8416 30.2277C69.1813 30.7647 68.393 31.1932 67.4737 31.5159C66.5516 31.8386 65.4624 32 64.2088 32ZM66 25.9792C67.1338 25.9792 68.1395 25.7177 69.0142 25.1974C69.8889 24.6772 70.5602 23.9593 71.0366 23.0412C71.513 22.1203 71.7498 21.0658 71.7498 19.8694C71.7498 18.6759 71.513 17.6214 71.0366 16.7033C70.5602 15.7823 69.8889 15.0645 69.0142 14.5387C68.1395 14.0184 67.1338 13.7596 66 13.7596C64.8969 13.7596 63.908 14.0184 63.0333 14.5387C62.1586 15.0645 61.4761 15.7823 60.9886 16.7033C60.4982 17.6214 60.2503 18.662 60.2503 19.8249C60.2503 21.0185 60.4982 22.0841 60.9886 23.0189C61.4761 23.951 62.1586 24.6772 63.0333 25.1974C63.908 25.7177 64.8969 25.9792 66 25.9792Z"
-                            fill="white" />
+                            fill="var(--body-bg-color-rev)" />
                         <path
                             d="M84.8605 31.6767C83.6041 31.6767 82.5845 31.3011 81.8017 30.5499C81.019 29.8015 80.629 28.8917 80.629 27.8178C80.629 26.716 81.019 25.7923 81.8017 25.0383C82.5845 24.2871 83.6041 23.9115 84.8605 23.9115C86.0862 23.9115 87.0835 24.2871 87.8495 25.0383C88.6156 25.7923 89 26.716 89 27.8178C89 28.8917 88.6156 29.8015 87.8495 30.5499C87.0835 31.3011 86.0862 31.6767 84.8605 31.6767Z"
-                            fill="#EE2A26" />
+                            fill="var(--primary-color)" />
                     </g>
                     <defs>
                         <clipPath id="clip0_1078_1650">
@@ -57,44 +62,50 @@
             <div class="nav-items">
                 <ul>
                     <li class="nav-item">
-                        <a href="work.html" class="body-s text-rev">Work</a href="">
+                        <a href="work.html" class="body-s">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="body-s text-rev">Services</a href="">
+                        <a href="contact.html" class="body-s">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="body-s text-rev">Contact</a href="">
+                        <a href="contact.html" class="body-s">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="body-s text-rev">About</a href="">
+                        <a href="about.html" class="body-s">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <label class="apple-toggle">
+                            <input id="theme-toggle" type="checkbox" />
+                            <span class="slider"></span>
+                        </label>
+
                     </li>
                 </ul>
-                <div class="nav-button wipe">
-                    <a href="contact.html"><p class="text-rev">Let's Work Together</p></a>
-                </div>
+                    <a class="nav-button wipe" href="contact.html">
+                        <p>Let's Work Together</p>
+                    </a>
                 <div class="hamburger-menu-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
         <!-- Hero Section -->
         <div class="row-wrapper hero">
-            <!-- <div class="bg-gradient-wrapper"> -->
-                <!-- <div class="bg-gradient-red"></div> -->
-            <!-- </div> -->
             <div class="col-xl hero-content">
                 <div class="content-wrapper">
-                    <h2 class="display-xl text-rev">Say goodbye to boring design<span class="period">.</span></h2>
+                    <h2 class="display-xl">Say goodbye to boring design<span class="period">.</span></h2>
                 </div>
                 <div class="row-inner hero-content">
                     <div class="btn-row-inner">
                         <div class="btn inset">
                             <div class="btn-click">
                                 <div class="btn-line left"></div>
+                                <div class="btn-line top"></div>
+                                <div class="btn-line bottom"></div>
                                 <div class="btn-content">
-                                    <p class="body-xs text-rev">Design Subscriptions</p>
+                                    <p class="body-xs">Design Subscriptions</p>
                                     <i>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <polyline points="9 19 16 12 9 5" fill="none" stroke="#000"
@@ -107,8 +118,10 @@
                         <div class="btn inset">
                             <div class="btn-click">
                                 <div class="btn-line left"></div>
+                                <div class="btn-line top"></div>
+                                <div class="btn-line bottom"></div>
                                 <div class="btn-content">
-                                    <p class="body-xs text-rev">Start a Project</p>
+                                    <p class="body-xs">Start a Project</p>
                                     <i>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <polyline points="9 19 16 12 9 5" fill="none" stroke="#000"
@@ -121,7 +134,7 @@
                     </div>
                     <div class="col-small intro-content">
                         <div class="content-wrapper">
-                            <p class="body-sm text-rev">We’re a brand design and development agency that creates bespoke
+                            <p class="body-sm">We’re a brand design and development agency that creates bespoke
                                 solutions for ambitious startups and marketers pushing boundaries.</p>
                         </div>
                     </div>
@@ -145,197 +158,199 @@
         </div>
         <!-- Our Philosophy Section -->
         <div class="row-wrapper philosophy-wrapper">
-            <div class="bg-gradient-wrapper">
-                <div class="bg-gradient-philosophy"></div>
-            </div>
             <div class="col-monogram">
-                <svg class="nbd-monogram" xmlns="http://www.w3.org/2000/svg" width="647" height="420" viewBox="0 0 647 420" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M192.856 21.9403V42.0441L223.962 73.3874V31.3433H393.755L410.596 48.3127V94.0299H441.702V36.8773L405.104 0H180.413V9.82538L187.667 13.5229C190.869 15.1329 192.856 18.3591 192.856 21.9403ZM516.356 65.8209V275.821H553.683V65.8209C553.683 62.2336 555.657 59.0136 558.841 57.4097L566.125 53.7366V43.8806H503.913V53.7366L511.198 57.4097C514.381 59.0136 516.356 62.2336 516.356 65.8209ZM43.5481 288.358H74.6539V313.433H0V303.607L7.24183 299.916C10.4557 298.3 12.4423 295.074 12.4423 291.492V128.507C12.4423 124.926 10.4557 121.7 7.25397 120.09L0 116.393V106.567H178.591L223.962 152.284V194.328H265.687L290.572 219.403H223.962V275.821H192.856V131.642H43.5481V288.358ZM410.596 371.687L393.755 388.657H223.962V325.97H192.856V398.06C192.856 401.641 190.869 404.867 187.655 406.483L180.413 410.175V420H405.104L441.702 383.123V371.687L410.596 340.344V371.687ZM566.125 106.567H610.402L647 143.444V276.555L610.402 313.433H462.188L441.702 292.79L437.303 288.358L410.596 261.447V236.642L387.783 219.403H368.871L343.986 194.328H387.783L410.596 177.09V144.179H441.702V180.224L410.614 203.731L441.702 227.239V288.358H497.692H516.356H553.683H572.346H592.832L615.894 265.12V154.88L592.832 131.642H566.125V106.567ZM124.423 354.179V144.179H87.0962V354.179C87.0962 357.767 85.1217 360.987 81.9382 362.59L74.6539 366.263V376.119H136.865V366.263L129.581 362.59C126.398 360.987 124.423 357.766 124.423 354.179ZM477.206 344.776H516.356V325.97H553.683V376.119H462.188L399.976 313.433H136.865V288.358H375.092L163.573 75.2239H124.423V94.0299H87.0962V65.8209C87.0962 62.2336 85.1217 59.0136 81.9382 57.4097L74.6539 53.7366V43.8806H178.591L240.802 106.567H503.913V131.642H265.687L477.206 344.776Z" fill="white" fill-opacity="0.05"/>
-                  </svg>
+                <svg class="nbd-monogram" xmlns="http://www.w3.org/2000/svg" width="647" height="420"
+                    viewBox="0 0 647 420" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M192.856 21.9403V42.0441L223.962 73.3874V31.3433H393.755L410.596 48.3127V94.0299H441.702V36.8773L405.104 0H180.413V9.82538L187.667 13.5229C190.869 15.1329 192.856 18.3591 192.856 21.9403ZM516.356 65.8209V275.821H553.683V65.8209C553.683 62.2336 555.657 59.0136 558.841 57.4097L566.125 53.7366V43.8806H503.913V53.7366L511.198 57.4097C514.381 59.0136 516.356 62.2336 516.356 65.8209ZM43.5481 288.358H74.6539V313.433H0V303.607L7.24183 299.916C10.4557 298.3 12.4423 295.074 12.4423 291.492V128.507C12.4423 124.926 10.4557 121.7 7.25397 120.09L0 116.393V106.567H178.591L223.962 152.284V194.328H265.687L290.572 219.403H223.962V275.821H192.856V131.642H43.5481V288.358ZM410.596 371.687L393.755 388.657H223.962V325.97H192.856V398.06C192.856 401.641 190.869 404.867 187.655 406.483L180.413 410.175V420H405.104L441.702 383.123V371.687L410.596 340.344V371.687ZM566.125 106.567H610.402L647 143.444V276.555L610.402 313.433H462.188L441.702 292.79L437.303 288.358L410.596 261.447V236.642L387.783 219.403H368.871L343.986 194.328H387.783L410.596 177.09V144.179H441.702V180.224L410.614 203.731L441.702 227.239V288.358H497.692H516.356H553.683H572.346H592.832L615.894 265.12V154.88L592.832 131.642H566.125V106.567ZM124.423 354.179V144.179H87.0962V354.179C87.0962 357.767 85.1217 360.987 81.9382 362.59L74.6539 366.263V376.119H136.865V366.263L129.581 362.59C126.398 360.987 124.423 357.766 124.423 354.179ZM477.206 344.776H516.356V325.97H553.683V376.119H462.188L399.976 313.433H136.865V288.358H375.092L163.573 75.2239H124.423V94.0299H87.0962V65.8209C87.0962 62.2336 85.1217 59.0136 81.9382 57.4097L74.6539 53.7366V43.8806H178.591L240.802 106.567H503.913V131.642H265.687L477.206 344.776Z"
+                        fill="white" fill-opacity="0.05" />
+                </svg>
             </div>
             <div class="col-philosophy content-wrapper">
-                <p class="body-xl text-rev">We believe in forging strong partnerships to create impactful work. We know that your brand isn’t just built on a logo, a color palette, or a website. Brands are created with inspiring stories, bold personality, a&nbsp;devilish attention to detail, great customer experiences, and scroll stopping design.</p>
+                <p class="body-xl">We believe in forging strong partnerships to create impactful work. We know that your
+                    brand isn’t just built on a logo, a color palette, or a website. Brands are created with inspiring
+                    stories, bold personality, a&nbsp;devilish attention to detail, great customer experiences, and
+                    scroll stopping design.</p>
             </div>
         </div>
         <!-- Services Marquee Section -->
         <div class=" row-wrapper">
-                <div class="col-marquee">
-                    <div class="marquee-text-track">
-                        <h3 class="display-m text-rev marquee-text">Branding & Identity</h3>
-                        <h3 class="display-m text-rev marquee-text">—</h3>
-                        <h3 class="display-m text-rev marquee-text">Displays & Exhibits</h3>
-                        <h3 class="display-m text-rev marquee-text">—</h3>
-                        <h3 class="display-m text-rev marquee-text">Video & Photo</h3>
-                        <h3 class="display-m text-rev marquee-text">—</h3>
-                        <h3 class="display-m text-rev marquee-text">Physical & Digital Experiences</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">—</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">Branding & Identity</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">—</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">Displays & Exhibits</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">—</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">Video & Photo</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">—</h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">Physical & Digital Experiences
-                        </h3>
-                        <h3 aria-hidden="true" class="display-m text-rev marquee-text">—</h3>
-                    </div>
+            <div class="col-marquee">
+                <div class="marquee-text-track">
+                    <h3 class="display-m marquee-text">Branding & Identity</h3>
+                    <h3 class="display-m marquee-text">—</h3>
+                    <h3 class="display-m marquee-text">Displays & Exhibits</h3>
+                    <h3 class="display-m marquee-text">—</h3>
+                    <h3 class="display-m marquee-text">Video & Photo</h3>
+                    <h3 class="display-m marquee-text">—</h3>
+                    <h3 class="display-m marquee-text">Physical & Digital Experiences</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">—</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">Branding & Identity</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">—</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">Displays & Exhibits</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">—</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">Video & Photo</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">—</h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">Physical & Digital Experiences
+                    </h3>
+                    <h3 aria-hidden="true" class="display-m marquee-text">—</h3>
                 </div>
             </div>
-            <!-- Recent Work Section -->
-            <div class="row-wrapper">
-                <div class="recent-work-heading">
-                    <div class="content-wrapper">
-                        <h2 class="text-rev body-xl">Recent work</h2>
-                    </div>
+        </div>
+        <!-- Recent Work Section -->
+        <div class="row-wrapper">
+            <div class="recent-work-heading">
+                <div class="content-wrapper">
+                    <h2 class="text-rev body-xl">Recent work</h2>
                 </div>
             </div>
-            <!-- Case Study Cards -->
-            <div class="row-wrapper case-study-wrapper">
-                <!-- CS 01 -->
-                <div class="case-study-col cs-01">
-                    <div class="case-study-card">
-                        <img src="../home/images/polimorphic-case-study_648x648.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">Polimorphic</p>
-                    </div>
+        </div>
+        <!-- Case Study Cards -->
+        <div class="row-wrapper case-study-wrapper">
+            <!-- CS 01 -->
+            <div class="case-study-col cs-01">
+                <div class="case-study-card">
+                    <img src="../home/images/polimorphic-case-study_648x648.jpg" />
                 </div>
-                <!-- CS 02 -->
-                <div class="case-study-col cs-02">
-                    <div class="case-study-card">
-                        <img src="../home/images/cartegraph-brand-guide_648x648.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">Cartegraph</p>
-                    </div>
-                </div>
-                <!-- CS 03 -->
-                <div class="case-study-col cs-03">
-                    <div class="case-study-card">
-                        <img src="../home/images/photo-logica-case-study_648x648.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">Photologica</p>
-                    </div>
-                </div>
-                <!-- CS 04 -->
-                <div class="case-study-col cs-04">
-                    <div class="case-study-card">
-                        <img src="../home/images/case-study_dccb-maps-design-system.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">Dubuque County Conservation</p>
-                    </div>
-                </div>
-                <!-- CS 05 -->
-                <div class="case-study-col cs-05">
-                    <div class="case-study-card">
-                        <img src="../home/images/case-study_dccb-maps-design-system.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">State of Local Government Survey</p>
-                    </div>
-                </div>
-                <!-- CS 06 -->
-                <div class="case-study-col cs-06">
-                    <div class="case-study-card">
-                        <img src="../home/images/case-study_uomo-branding.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">Four Mounds</p>
-                    </div>
-                </div>
-                <!-- CS 07 -->
-                <div class="case-study-col cs-07">
-                    <div class="case-study-card">
-                        <img src="../home/images/case-study_cartecon-event-branding.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">CarteCon Branding</p>
-                    </div>
-                </div>
-                <!-- CS 08 -->
-                <div class="case-study-col cs-08">
-                    <div class="case-study-card">
-                        <img src="../home/images/case-study_uomo-branding.jpg" />
-                    </div>
-                    <div class="case-study-details">
-                        <p class="body-xs text-rev">UOMO</p>
-                    </div>
-                </div>
-                <!-- See All Work Button -->
-                <div class="row-wrapper our-work-row-wrapper">
-                    <div class="our-work-button wipe">
-                        <a href="work.html">
-                            <p class="heading-m button-txt">See all work</p>
-                        </a>
-                    </div>
+                <div class="case-study-details">
+                    <p class="body-xs">Polimorphic</p>
                 </div>
             </div>
-            <div class="row-wrapper services">
-                <img src="../home/images/blue-ridge-mountains-photo.png" class="services-bg" />
-                <div class="col-xl services-wrapper">
-                    <div class="content-wrapper">
-                        <h2 class="display-m text-rev">We do it all—and then some<span
-                                class="period">.</span>
-                        </h2>
+            <!-- CS 02 -->
+            <div class="case-study-col cs-02">
+                <div class="case-study-card">
+                    <img src="../home/images/cartegraph-brand-guide_648x648.jpg" />
+                </div>
+                <div class="case-study-details">
+                    <p class="body-xs">Cartegraph</p>
+                </div>
+            </div>
+            <!-- CS 03 -->
+            <div class="case-study-col cs-03">
+                <div class="case-study-card">
+                    <img src="../home/images/photo-logica-case-study_648x648.jpg" />
+                </div>
+                <div class="case-study-details">
+                    <p class="body-xs">Photologica</p>
+                </div>
+            </div>
+            <!-- CS 04 -->
+            <div class="case-study-col cs-04">
+                <div class="case-study-card">
+                    <img src="../home/images/case-study_dccb-maps-design-system.jpg" />
+                </div>
+                <div class="case-study-details">
+                    <p class="body-xs">Dubuque County Conservation</p>
+                </div>
+            </div>
+            <!-- CS 05 -->
+            <div class="case-study-col cs-05">
+                <div class="case-study-card">
+                    <img src="../home/images/case-study_dccb-maps-design-system.jpg" />
+                </div>
+                <div class="case-study-details">
+                    <p class="body-xs">State of Local Government Survey</p>
+                </div>
+            </div>
+            <!-- CS 06 -->
+            <div class="case-study-col cs-06">
+                <div class="case-study-card">
+                    <img src="../home/images/case-study_uomo-branding.jpg" />
+                </div>
+                <div class="case-study-details">
+                    <p class="body-xs">Four Mounds</p>
+                </div>
+            </div>
+            <!-- CS 07 -->
+            <div class="case-study-col cs-07">
+                <div class="case-study-card">
+                    <img src="../home/images/case-study_cartecon-event-branding.jpg" />
+                </div>
+                <div class="case-study-details">
+                    <p class="body-xs">CarteCon Branding</p>
+                </div>
+            </div>
+            <!-- CS 08 -->
+            <div class="case-study-col cs-08">
+                <div class="case-study-card">
+                    <img src="../home/images/case-study_uomo-branding.jpg" />
+                </div>
+                <div class="case-study-details">
+                    <p class="body-xs">UOMO</p>
+                </div>
+            </div>
+            <!-- See All Work Button -->
+            <div class="row-wrapper our-work-row-wrapper">
+                <div class="our-work-button wipe">
+                    <a href="work.html">
+                        <p class="heading-m button-txt">See all work</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row-wrapper services">
+            <img src="../home/images/blue-ridge-mountains-photo.png" class="services-bg" />
+            <div class="col-xl services-wrapper">
+                <div class="content-wrapper">
+                    <h2 class="display-m">We do it all—and then some<span class="period">.</span>
+                    </h2>
+                </div>
+                <div class="services-row-inner">
+                    <div class="col-small sc services-01">
+                        <div class="content-wrapper services-col">
+                            <h3 class="heading-sm">Branding & Identity</h3>
+                            <p class="body-sm">We’ll uncover your brand’s essence, develop a
+                                rock-solid strategy, and create guidelines that stick. From design systems to killer
+                                graphics, we’ve got you covered.</p>
+                        </div>
                     </div>
-                    <div class="services-row-inner">
-                        <div class="col-small sc services-01">
-                            <div class="content-wrapper services-col">
-                                <h3 class="heading-m text-rev">Branding & Identity</h3>
-                                <p class="body-sm text-rev">We’ll uncover your brand’s essence, develop a
-                                    rock-solid strategy, and create guidelines that stick. From design systems to killer
-                                    graphics, we’ve got you covered.</p>
-                            </div>
+                    <div class="col-small sc services-02">
+                        <div class="content-wrapper services-col">
+                            <h3 class="heading-sm">Physical & Print</h3>
+                            <p class="body-sm">We can craft anything from interior branding,
+                                signage, and large corporate events to packaging, awards, and the promotional
+                                materials to go with it. </p>
                         </div>
-                        <div class="col-small sc services-02">
-                            <div class="content-wrapper services-col">
-                                <h3 class="heading-m text-rev">Physical & Print</h3>
-                                <p class="body-sm text-rev">We can craft anything from interior branding,
-                                    signage, and large corporate events to packaging, awards, and the promotional
-                                    materials to go with it. </p>
-                            </div>
+                    </div>
+                    <div class="col-small sc services-03">
+                        <div class="content-wrapper services-col">
+                            <h3 class="heading-sm">Video & Photo</h3>
+                            <p class="body-sm">We capture custom portrait and product
+                                photography, brand videography, and stunning drone shots to tell your story in
+                                digital and in print.</p>
                         </div>
-                        <div class="col-small sc services-03">
-                            <div class="content-wrapper services-col">
-                                <h3 class="heading-m text-rev">Video & Photo</h3>
-                                <p class="body-sm text-rev">We capture custom portrait and product
-                                    photography, brand videography, and stunning drone shots to tell your story in
-                                    digital and in print.</p>
-                            </div>
-                        </div>
-                        <div class="col-small sc services-04">
-                            <div class="content-wrapper services-col">
-                                <h3 class="heading-m text-rev">Web & Digital</h3>
-                                <p class="body-sm text-rev">Get custom design and full-stack development
-                                    on both code and no-code platforms like Squarespace, HubSpot, Webflow, and
-                                    WordPress.</p>
-                            </div>
+                    </div>
+                    <div class="col-small sc services-04">
+                        <div class="content-wrapper services-col">
+                            <h3 class="heading-sm">Web & Digital</h3>
+                            <p class="body-sm">Get custom design and full-stack development
+                                on both code and no-code platforms like Squarespace, HubSpot, Webflow, and
+                                WordPress.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- How We Work Section -->
-            <div class="row-wrapper how-we-work">
-                <div class="col-xl how-we-work-wrapper">
-                    <div class="content-wrapper">
-                        <h2 class="display-m">How we work<span class="period">.</span>
-                        </h2>
-                    </div>
-                    <div class="how-we-work-inner">
-                        <div class="how-we-work-row">
-                            <hr />
+        </div>
+        <!-- How We Work Section -->
+        <div class="row-wrapper how-we-work">
+            <div class="col-xl how-we-work-wrapper">
+                <div class="content-wrapper">
+                    <h2 class="display-m">How we work<span class="period">.</span>
+                    </h2>
+                </div>
+                <div class="how-we-work-inner">
+                    <div class="how-we-work-row">
+                        <hr />
+                        <div class="how-we-work-col">
                             <a href="work.html" class="how-we-work-card hww-hover">
                                 <div class="how-we-work-content-wrapper">
                                     <h3 class="heading-m">Design</h3>
                                     <p class="body-sm">Think of us as your on-demand design and development department.
                                         Fast, reliable senior-level creative support for ongoing needs, from marketing
                                         to web, all for a predictable monthly fee.</p>
-                                        <div class="pricing-label">
-                                            <p class="body-xxs">Starting at $2,500</p>
-                                        </div>
+                                    <div class="pricing-label">
                                     </div>
+                                </div>
                                 <div class="how-we-work-cta">
                                     <p class="body-xs" href="work.html">Schedule a Free 30-Minute Discovery
                                         Call</p>
@@ -347,16 +362,17 @@
                                     </svg>
                                 </div>
                             </a>
+                        </div>
+                        <div class="how-we-work-col">
                             <a href="work.html" class="how-we-work-card hww-hover">
                                 <div class="how-we-work-content-wrapper">
                                     <h3 class="heading-m">Development</h3>
                                     <p class="body-sm">Your all-access pass to a multidisciplinary team of creatives and
                                         strategists—covering copywriting, design, and development. Perfect for tackling
                                         large brand and marketing initiatives, priced per project.</p>
-                                        <div class="pricing-label">
-                                            <p class="body-xxs">Starting at $2,500</p>
-                                        </div>
+                                    <div class="pricing-label">
                                     </div>
+                                </div>
                                 <div class="how-we-work-cta">
                                     <p class="body-xs" href="work.html">Schedule a Free 30-Minute Discovery
                                         Call</p>
@@ -368,6 +384,8 @@
                                     </svg>
                                 </div>
                             </a>
+                        </div>
+                        <div class="how-we-work-col">
                             <a href="work.html" class="how-we-work-card hww-hover">
                                 <div class="how-we-work-content-wrapper">
                                     <h3 class="heading-m">Branding & Identity</h3>
@@ -375,11 +393,9 @@
                                         rethinking your identity to ensuring your new look shines across every
                                         touchpoint, we offer the perfect balance of strategy and support for ongoing
                                         needs.</p>
-                                        <div class="pricing-label">
-                                            <p class="body-xxs">Custom Pricing</p>
-                                        </div>
+                                    <div class="pricing-label">
+                                    </div>
                                 </div>
-                                
                                 <div class="how-we-work-cta">
                                     <p class="body-xs" href="work.html">Schedule a Free 30-Minute Discovery
                                         Call</p>
@@ -391,34 +407,38 @@
                                     </svg>
                                 </div>
                             </a>
-                            <a href="work.html" class="how-we-work-card learn-more-hover">
-                                <div class="how-we-work-content-wrapper">
-                                    <h3 class="heading-m" href="work.html">Learn more</h3>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                        fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M14.5293 2.03332L7.50289 2.03308L7.50296 0L18 0.000359908V10.4528H15.9669V3.47096L1.43759 18L0 16.5624L14.5293 2.03332Z"
-                                            fill="black" />
-                                    </svg>
-                                </div>
-                            </a>
                         </div>
+                        <div class="how-we-work-col">
+                        <a href="work.html" class="how-we-work-card learn-more-hover">
+                            <div class="how-we-work-content-wrapper">
+                                <h3 class="heading-m" href="work.html">Learn more</h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.5293 2.03332L7.50289 2.03308L7.50296 0L18 0.000359908V10.4528H15.9669V3.47096L1.43759 18L0 16.5624L14.5293 2.03332Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="row-wrapper contact-footer">
-                <div class="col-xl">
-                    <div class="content-wrapper">
-                        <h2 class="display-m text-rev">Get in touch<span class="period">.</span>
-                        </h2>
-                    </div>
-                    <div class="contact-footer-row">
-                        <div class="footer-col-split">
+        </div>
+        </div>
+        <div class="row-wrapper contact-footer">
+            <div class="col-xl">
+                <div class="content-wrapper">
+                    <h2 class="display-m">Get in touch<span class="period">.</span>
+                    </h2>
+                </div>
+                <div class="contact-footer-row">
+                    <div class="footer-col-split">
                         <div class="col-small">
                             <div class="content-wrapper footer-links-wrapper">
-                                <h5 class="heading-m text-rev">Navigation</h5>
+                                <h5 class="heading-m">Navigation</h5>
                                 <ul>
-                                    <li class="footer-menu-item body-xs custom-underline"><a href="index.html">Home</a></li>
+                                    <li class="footer-menu-item body-xs custom-underline"><a href="index.html">Home</a>
+                                    </li>
                                     <li class="footer-menu-item body-xs"><a href="about.html">About</a></li>
                                     <li class="footer-menu-item body-xs"><a href="work.html">Work</a></li>
                                     <li class="footer-menu-item body-xs"><a href="services.html">Services</a></li>
@@ -430,7 +450,7 @@
                         </div>
                         <div class="col-small">
                             <div class="content-wrapper footer-links-wrapper">
-                                <h5 class="heading-m text-rev">Connect</h5>
+                                <h5 class="heading-m">Connect</h5>
                                 <ul>
                                     <li class="footer-menu-item body-xs"><a href="index.html">Linkedin</a></li>
                                     <li class="footer-menu-item body-xs"><a href="about.html">Instagram</a></li>
@@ -439,19 +459,18 @@
                             </div>
                         </div>
                     </div>
-                        <div class="footer-col-split">
-                            <div class="content-wrapper footer-form-wrapper">
-                                <h5 class="heading-m">Ready to start your digital transformation?</h5>
-                                <p class="body-sm">We’re excited to learn more about how we can help you achieve your
-                                    business goals. Fill out the form below and we’ll be in touch soon.</p>
-                                    <p class="body-xs">Prefer email? Drop us a line at <a
-                                        href="mailto:hello@nbd.design">hello@nbd.design</a>.
-                                </div>
-                            </p>
+                    <div class="footer-col-split">
+                        <div class="content-wrapper footer-form-wrapper">
+                            <h5 class="heading-m">Ready to start your digital transformation?</h5>
+                            <p class="body-sm">We’re excited to learn more about how we can help you achieve your
+                                business goals. Fill out the form below and we’ll be in touch soon.</p>
+                            <p class="body-xs">Prefer email? Drop us a line at <a
+                                    href="mailto:hello@nbd.design">hello@nbd.design</a>.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
     <hr class="footer-hr">
     <footer>
@@ -463,7 +482,3 @@
 </body>
 
 </html>
-
-
-
-
