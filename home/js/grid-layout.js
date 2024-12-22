@@ -29,6 +29,7 @@ function createPreloaderColumns() {
   // Clear existing preloader columns
   const existingColumns = container.querySelectorAll('.preloader-column');
   existingColumns.forEach(column => column.remove());
+  
 
   // Create and append new preloader columns
   for (let i = 0; i < columnCount; i++) {
@@ -41,7 +42,7 @@ function createPreloaderColumns() {
   gsap.to(".preloader-column", {
     scaleY: 0,
     transformOrigin: "top",
-    delay: 1,
+    delay: 1.5,
     duration: 1,
     stagger: 0.2,
     ease: "power2.out"
@@ -142,7 +143,7 @@ hamburgerMenuIcon.addEventListener('click', () => {
 
 
 // ----------------------------------------------------------------
-//JS FUNCTION TO TOGGLE LIGHT AND DAREK THEME
+//JS FUNCTION TO TOGGLE LIGHT AND DARK THEME
 // ----------------------------------------------------------------
 
 

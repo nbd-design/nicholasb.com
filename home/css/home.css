@@ -788,3 +788,14 @@ input:checked+.slider::before {
     transform: translateX(20px);
     /* Slide knob to the right */
 }
+
+
+
+.say-title,
+.goodbye-title,
+.to-title,
+.boring-title,
+.design-title,
+.period-title {
+    display: inline-block;
+}

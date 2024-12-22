@@ -57,12 +57,20 @@ gsap.to("[data-speed]", {
     }
 });
 
+// ---------------------------------
+// Preloader Logo Animation
+// ---------------------------------
 
 gsap.from(".preloader-logo", {
     opacity: 0,
-    rotation: -180,
+    rotation: -270,
+    scale: 0,
     duration: 1,
     ease: "power3.inOut",
+        /**
+         * Called when the animation is complete.
+         * Hides the preloader logo after animation is done.
+         */
     onComplete: () => {
         gsap.to(".preloader-logo", {
             opacity: 0,
@@ -72,4 +80,68 @@ gsap.from(".preloader-logo", {
         });
     },
 });
+
+// ---------------------------------
+// Hero Text Animation
+// ---------------------------------
+
+const introTl = gsap.timeline({ delay: 2.25 });
+
+introTl.from(".home-heading .say-title", {
+    opacity: 0,
+    y: 50,
+    ease: "elastic.out(1, 0.75)",
+    duration: 0.5,
+})
+    .from(
+        ".home-heading .goodbye-title",
+        {
+            opacity: 0,
+            y: 50,
+            ease: "elastic.out(1, 0.75)",
+            duration: 0.5,
+        },
+        "<0.1"
+    )
+    .from(
+        ".home-heading .to-title",
+        {
+            opacity: 0,
+            y: 50,
+            ease: "elastic.out(1, 0.75)",
+            duration: 0.5,
+        },
+        "<0.1"
+    )
+    .from(
+        ".home-heading .boring-title",
+        {
+            opacity: 0,
+            y: 50,
+            ease: "elastic.out(1, 0.75)",
+            duration: 0.5,
+        },
+        "<0.1"
+    )
+    .from(
+        ".home-heading .design-title",
+        {
+            opacity: 0,
+            y: 50,
+            ease: "elastic.out(1, 0.75)",
+            duration: 0.5,
+        },
+        "<0.1"
+    )
+    .from(
+        ".home-heading .period-title",
+        {
+            scale: 0,
+            opacity: 0,
+            y: 50,
+            ease: "elastic.out(1, 0.75)",
+            duration: 0.5,
+        },
+        "<0.1"
+    );
 

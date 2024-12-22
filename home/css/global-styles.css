@@ -691,7 +691,7 @@ hr {
     justify-content: center;
 }
 
-.preloader-column:nth-child(1) {
+.preloader-column:nth-child(2) {
     width: var(--col-gap);
 }
 
@@ -718,4 +718,11 @@ hr {
     height: 200px;
     transform: translate(-50%, -50%);
     z-index: 100000;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .preloader-logo{
+        width: 100px;
+        height: 100px;
+    }
 }
