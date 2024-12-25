@@ -44,7 +44,7 @@ function createPreloaderColumns() {
     transformOrigin: "top",
     delay: 1.5,
     duration: 1,
-    stagger: 0.2,
+    stagger: 0.15,
     ease: "power2.out"
   });
 
@@ -109,7 +109,7 @@ function createGridLines() {
   gsap.from(".grid-line", {
     scaleY: 0,
     transformOrigin: "top",
-    delay: 0.5,
+    delay: 1.9,
     duration: 1,
     stagger: 0.2,
     ease: "power2.out"

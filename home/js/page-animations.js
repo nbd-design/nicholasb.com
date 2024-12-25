@@ -1,12 +1,11 @@
-//GSAP Animations start after everything is loaded
+// -------------------------------------------------
+// GSAP Animations start after everything is loaded
+// -------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", (event) => {
     //gsap code goes here
 
     gsap.registerPlugin(ScrollTrigger);
-
-    // HERO SCROLL ANIMATION
-    // 3D rotation and z transform of grid on scroll
 
     let tl = gsap.timeline({
         scrollTrigger: {
@@ -20,9 +19,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     tl.to(".case-study-col", { duration: 4, y: 0 });
 
-
-    // HERO SCROLL ANIMATION
-    // 3D rotation and z transform of grid on scroll
 
     let stl = gsap.timeline({
         scrollTrigger: {
@@ -41,10 +37,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 }); //Do not delete
 
-
-
-
+// ---------------------------------------------------------------------------------
 // APPLY SCROLL TRIGGER PARALLAX WITH GSAP BY ADDING [data-speed] ATTRIBUTE IN HTML
+// ---------------------------------------------------------------------------------
 
 gsap.to("[data-speed]", {
     y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
@@ -67,10 +62,10 @@ gsap.from(".preloader-logo", {
     scale: 0,
     duration: 1,
     ease: "power3.inOut",
-        /**
-         * Called when the animation is complete.
-         * Hides the preloader logo after animation is done.
-         */
+    /**
+     * Called when the animation is complete.
+     * Hides the preloader logo after animation is done.
+     */
     onComplete: () => {
         gsap.to(".preloader-logo", {
             opacity: 0,
@@ -87,11 +82,19 @@ gsap.from(".preloader-logo", {
 
 const introTl = gsap.timeline({ delay: 2.25 });
 
-introTl.from(".home-heading .say-title", {
+introTl.from(
+    ".nav",
+    {
+        opacity: 0,
+        y: -50,
+        ease: "easeOut",
+        duration: 0.5,
+    })
+    .from(".home-heading .say-title", {
     opacity: 0,
     y: 50,
     ease: "elastic.out(1, 0.75)",
-    duration: 0.5,
+    duration: 0.75,
 })
     .from(
         ".home-heading .goodbye-title",
@@ -99,7 +102,7 @@ introTl.from(".home-heading .say-title", {
             opacity: 0,
             y: 50,
             ease: "elastic.out(1, 0.75)",
-            duration: 0.5,
+            duration: 0.75,
         },
         "<0.1"
     )
@@ -109,7 +112,7 @@ introTl.from(".home-heading .say-title", {
             opacity: 0,
             y: 50,
             ease: "elastic.out(1, 0.75)",
-            duration: 0.5,
+            duration: 0.75,
         },
         "<0.1"
     )
@@ -119,7 +122,7 @@ introTl.from(".home-heading .say-title", {
             opacity: 0,
             y: 50,
             ease: "elastic.out(1, 0.75)",
-            duration: 0.5,
+            duration: 0.75,
         },
         "<0.1"
     )
@@ -129,7 +132,7 @@ introTl.from(".home-heading .say-title", {
             opacity: 0,
             y: 50,
             ease: "elastic.out(1, 0.75)",
-            duration: 0.5,
+            duration: 0.75,
         },
         "<0.1"
     )
@@ -143,5 +146,120 @@ introTl.from(".home-heading .say-title", {
             duration: 0.5,
         },
         "<0.1"
+    )
+    .fromTo(
+        ".btn .btn-click .btn-line.left",
+        {
+            scale: 0,
+            height: 0,
+        },
+        {
+            scale: 1,
+            height: "100%",
+            transformOrigin: "top",
+            ease: "none",
+            duration: .2,
+            stagger: 0.2,
+        },
+        "<0.1" 
+    )
+    .from(
+        ".btn-content",
+        {
+            opacity: 0,
+            delay: 0.5,
+            x: -20,
+            ease: "power2.out",
+            duration: 0.75,
+            stagger: 0.2,
+        },
+        "<0.25"
+    )
+    .from(
+        ".intro-content",
+        {
+            opacity: 0,
+            x: 50,
+            ease: "easyEase",
+            duration: 0.5,
+        },
+        ">-0.5"
     );
+
+
+// ---------------------------------------
+// Philosophy Text Fade Mask Animation
+// ---------------------------------------
+
+gsap.from(".text-fade-mask", {
+    scrollTrigger: {
+        trigger: ".philosophy-wrapper",
+        start: "top center",
+        end: "bottom center",
+        scrub: 2,
+        markers: false,
+    },
+    x: "-57%", // Animate from -57% to 50%
+    transformStyle: "preserve-3d",
+
+});
+
+
+
+// ---------------------------------------
+// Logo Path Bounce on Hover Animation
+// ---------------------------------------
+
+const logoPaths = document.querySelectorAll(".logo path");
+
+document.querySelector(".logo").addEventListener("mouseenter", () => {
+    logoPaths.forEach((path, index) => {
+        gsap.to(path, {
+            y: -8, // Bounce up by 10px
+            duration: 0.4,
+            ease: "easeOut",
+            delay: index * 0.1, // Stagger effect
+            onComplete: () => {
+                gsap.to(path, {
+                    y: 0, // Return to the original position
+                    duration: 0.2,
+                    ease: "elastic.out(1, 2)",
+                });
+            }
+        });
+    });
+});
+
+// ---------------------------------------
+// Customer Logo Scroll Animation
+// ---------------------------------------
+
+let logoTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".customer-logo",
+        start: "top center",
+        toggleActions: "play none none reverse",
+        markers: true
+    }
+});
+
+logoTl.to(".customer-logo", {
+    opacity: 0,
+    x: 50,
+    duration: 0.4,
+    display: "none",
+    ease: "ease",
+})
+.fromTo(".customer-logo-2", {
+    opacity: 0,
+    x: -50,
+    display: "none",
+},
+{
+    opacity: 1,
+    x: 0,
+    duration: 0.4,
+    display: "block",
+    ease: "ease",
+});
 

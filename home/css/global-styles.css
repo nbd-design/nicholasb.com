@@ -35,6 +35,10 @@ a {
     color: var(--primary-color);
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 a,
 a:link,
 a:visited {
@@ -72,7 +76,8 @@ hr {
     /* Tertiary brand color token */
     --tertiary-color: #FFC700;
 
-
+    /* Transparent */
+    --color--transparent: rgba(0, 0, 0, 0);
     /* Light grays */
     --gray-0: #ffffff;
     /* Pure white */
@@ -442,6 +447,20 @@ hr {
     transition: color ease-in-out 0.2s;
 }
 
+a.logo{
+    overflow: visible;
+}
+
+a.logo svg{
+    overflow: visible;
+    overflow-clip-margin: unset;
+}
+
+g{
+    overflow: visible;
+    overflow-clip-margin: unset;
+}
+
 /* ----------------------------- */
 /* -------- Mobile Menu -------- */
 /* ----------------------------- */
@@ -590,9 +609,15 @@ hr {
 .btn .btn-click .btn-line.left {
     background-color: var(--primary-color);
     left: 0px;
+    transform-origin: top;
+    transform: scaleY(1);
+    height: 100%;
 }
 
-.btn.inset {}
+.btn.inset {
+    padding: 0;
+    height: 0;
+}
 
 .btn .btn-content {
     display: flex;
