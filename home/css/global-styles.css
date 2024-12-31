@@ -59,6 +59,11 @@ hr {
     z-index: 1000;
 }
 
+::selection {
+    background-color: var(--selection-color);
+    color: var(--gray-0);
+}
+
 /* ------------------------------ */
 /* -------- CSS VARIABLES-------- */
 /* ------------------------------ */
@@ -105,14 +110,20 @@ hr {
     /* Very dark gray */
     --gray-900: #171717;
     /* Almost black */
+    --gray-950: #0e100f;
+    /* Black */
     --gray-1000: #000000;
     /* Pure black */
 
     /* Dark Theme */
-    --body-bg-color: var(--gray-1000);
+    --body-bg-color: var(--gray-950);
     --body-bg-color-rev: var(--gray-0);
-    --text-theme-color: var(--gray-0);
+    --text-theme-color: var(--gray-50);
     --text-theme-color-rev: var(--gray-1000);
+    --section-fg-color-light: var(--gray-900);
+    --text-light-bg-color: var(--gray-1000);
+    --selection-color: hsla(2, 100%, 44%, 0.6);
+    --card-bg-color: #f5f7fa;
 
 
     /* ------------------ */
@@ -131,7 +142,7 @@ hr {
     --col-small: 25%;
 
 
-    --col-span-all: calc(99.99vw - (var(--col-gap) * 2));
+    --col-span-all: calc(100vw - (var(--col-gap) * 2));
     --col-span-3: calc((99.99vw - (var(--col-gap) * 2)) * 0.75);
     --col-span-2: calc((99.99vw - (var(--col-gap) * 2)) * 0.5);
     --col-span-1: calc((99.99vw - (var(--col-gap) * 2)) * 0.25);
@@ -200,6 +211,8 @@ hr {
     --color-dark-rgb: 0, 0, 0;
     --text-rev: var(--gray-0);
     --animation-primary: 0.4s cubic-bezier(.75, 0, .25, 1);
+
+    --preloader-grid-col: calc(var(--single-grid-col) + 2px)
 }
 
 /* Light Theme */
@@ -208,6 +221,9 @@ hr {
     --body-bg-color-rev: var(--gray-1000);
     --text-theme-color: var(--gray-1000);
     --text-theme-color-rev: var(--gray-0);
+    --section-fg-color-light: var(--gray-100);
+    --text-light-bg-color: var(--gray-1000);
+    --selection-color: hsla(2, 100%, 44%, 0.9);
 }
 
 
@@ -377,8 +393,8 @@ hr {
     align-self: stretch;
     align-items: center;
     justify-content: space-between;
-    background: var(--body-bg-color);
-    backdrop-filter: blur(4px);
+    /* background: var(--body-bg-color); */
+    backdrop-filter: blur(10px);
     z-index: 9999;
 }
 
@@ -725,7 +741,7 @@ g{
 }
 
 .preloader-column {
-    width: var(--single-grid-col);
+    width: var(--preloader-grid-col);
     height: 100%;
     display: flex;
     flex-direction: column;

@@ -10,7 +10,7 @@ function createPreloaderColumns() {
   }
 
   // Disable scroll
-  document.body.style.overflow = 'hidden';
+  // document.body.style.overflow = 'hidden';
 
   const viewportWidth = window.innerWidth;
 

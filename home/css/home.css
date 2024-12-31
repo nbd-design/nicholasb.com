@@ -11,7 +11,15 @@
     row-gap: var(--col-gap);
 }
 
-
+/* Hero headline animation classes */
+.say-title,
+.goodbye-title,
+.to-title,
+.boring-title,
+.design-title,
+.period-title {
+    display: inline-block;
+}
 
 /* Medium: 601px - 880px */
 @media (min-width: 601px) and (max-width: 880px) {
@@ -58,12 +66,12 @@
 .bg-gradient-red {
     top: 0%;
     left: 100%;
-    transform: translate(-50%, -50%) scale(1.5, 1);
+    transform: translate(-50%, -50%) scale(3, 1);
     opacity: 0.5;
     --gradient-size: calc(var(--title-size) * 12);
     width: var(--gradient-size);
     height: var(--gradient-size);
-    background: radial-gradient(circle, #E10600 0%, rgba(var(--color-dark-rgb), 0) 66%);
+    background: radial-gradient(circle, #e10600 0%, #e1060000 66%);
     position: absolute;
     pointer-events: none;
     border-radius: 50%;
@@ -78,11 +86,26 @@
     --gradient-size: calc(var(--title-size) * 12);
     width: var(--gradient-size);
     height: var(--gradient-size);
-    background: radial-gradient(circle, var(--secondary-color) 0%, rgba(var(--color-dark-rgb), 0) 66%);
+    background: radial-gradient(circle, #005ECC 0%, #005ECC00 66%);
     position: absolute;
     pointer-events: none;
     border-radius: 50%;
-    z-index: 804;
+    z-index: 805;
+}
+
+.bg-gradient-recent-work {
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%) scale(1.5, 1);
+    opacity: 0.35;
+    --gradient-size: calc(var(--title-size) * 12);
+    width: var(--gradient-size);
+    height: var(--gradient-size);
+    background: radial-gradient(circle, #FFC700 0%, #FFC70000 66%);
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 805;
 }
 
 /* LOGO ROW STYLES */
@@ -150,15 +173,22 @@ img.customer-logo-2 {
     /* opacity: 0.05; */
 }
 
+/* Initial state for the paths  animated with gsap in page animations */
 .nbd-monogram path {
-    stroke-width: 1px;
     stroke: var(--color-border);
-}
-
+    stroke-width: 1; /* Set stroke width */
+    stroke-dasharray: 0; /* Length of the path */
+    stroke-dashoffset: var(--path-length); /* Initially hide the stroke by offsetting it by its full length */
+    fill: none; /* Make sure the path isn't filled */
+  }
+  
 .col-philosophy {
     width: calc(var(--col-span-2221) - 0.5px);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--col-gap);
 }
 
 /* Medium & Small: 320px - 880px */
@@ -190,6 +220,8 @@ img.customer-logo-2 {
     overflow-x: clip;
     padding-top: calc(var(--container-padding) * 4);
     padding-bottom: calc(var(--container-padding) * 4);
+    background-color: var(--body-bg-color);
+    border: 1px solid var(--color-border);
     z-index: 804;
 }
 
@@ -475,7 +507,7 @@ img.customer-logo-2 {
 
 .how-we-work {
     border-radius: var(--border-radius-medium);
-    background-color: var(--body-bg-color-rev);
+    background-color: var(--section-fg-color-light);
     padding-bottom: calc(var(--container-padding) * 2);
 
 }
@@ -500,7 +532,6 @@ img.customer-logo-2 {
     padding: var(--container-padding-sm);
     border: solid var(--color-border);
     border-width: 0 0 1px 0;
-    background-color: var(--body-bg-color-rev);
     z-index: 999;
 }
 
@@ -512,7 +543,7 @@ img.customer-logo-2 {
     width: 100%;
     height: 100%;
     padding: var(--container-padding);
-    background-color: var(--gray-100);
+    background-color: var(--card-bg-color);
     border-radius: var(--border-radius-medium);
     z-index: 999;
     gap: calc(var(--col-gap) * 2);
@@ -538,23 +569,53 @@ img.customer-logo-2 {
     align-items: center;
     gap: 8px;
     border-radius: 16px;
-    background: #005ECC;
     width: fit-content;
-    color: #fff;
     margin-top: 0.75em;
 }
 
+/* Pill label colors */
+
+.primary {
+    background: var(--primary-color);
+}
+
+.secondary {
+    background: var(--secondary-color);
+    color: var(--gray-0);
+}
+
+.tertiary {
+    background: var(--tertiary-color);
+    color: var(--gray-0);
+}
+
+/* Offering Card Typography Styles */
+
+.how-we-work p.body-l {
+    width: var(--col-span-2221);
+}
+
 .how-we-work h2,
+.how-we-work p.body-l {
+    color: var(--text-theme-color);
+    padding-bottom: 28px;
+}
+
 .how-we-work h3,
 .how-we-work p,
 .how-we-work li {
-    color: var(--text-theme-color-rev);
+    color: var(--text-light-bg-color);
 }
 
 .how-we-work-content-wrapper {
     display: flex;
     flex-flow: column;
     gap: var(--col-gap-xs);
+}
+
+.primary p,
+.secondary p {
+    color: var(--gray-0);
 }
 
 /* Pricing and pakaging card hover states */
@@ -581,6 +642,23 @@ img.customer-logo-2 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    position: relative;
+    padding-top: var(--container-padding);
+}
+
+div.how-we-work-cta::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* Align with the bottom of the nav */
+    height: 1px;
+    /* Thickness of the line */
+    background-color: var(--color-border);
+    /* Color of the line */
+    z-index: -1;
+    /* Adjust z-index as needed */
 }
 
 .hww-hover {
@@ -627,7 +705,6 @@ img.customer-logo-2 {
         top: 0;
         z-index: -1;
         background: var(--body-bg-color);
-        border-radius: var(--border-radius-medium);
 
         &:hover {
             color: red;
@@ -703,8 +780,13 @@ img.customer-logo-2 {
     flex-flow: column;
     gap: var(--col-gap);
     padding: var(--container-padding);
-    background-color: var(--gray-0);
+    background-color: var(--section-fg-color-light);
     border-radius: var(--border-radius-medium);
+}
+
+.footer-form-wrapper h5,
+.footer-form-wrapper p {
+    color: var(--text-theme-color);
 }
 
 .footer-col-split {
@@ -801,32 +883,3 @@ input:checked+.slider::before {
     transform: translateX(20px);
     /* Slide knob to the right */
 }
-
-
-
-.say-title,
-.goodbye-title,
-.to-title,
-.boring-title,
-.design-title,
-.period-title {
-    display: inline-block;
-}
-
-
-.text-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-  .text-fade-mask {
-    position: absolute;
-    display: block;
-    top: -20%;
-    right: 0;
-    background-image: linear-gradient(320deg, var(--body-bg-color) 50%, var(--color--transparent) 85%);
-    transform: translate3d(40%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    width: 230%;
-    height: 120%;
-    position: absolute;
-    inset: 0% auto 0% 0%;
-  }
