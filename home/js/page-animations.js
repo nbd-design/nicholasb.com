@@ -90,14 +90,14 @@ introTl.from(
         ease: "easeOut",
         duration: 0.5,
     })
-    .from(".home-heading .say-title", {
+    .from(".home-heading .title-01", {
     opacity: 0,
     y: 50,
     ease: "elastic.out(1, 0.75)",
     duration: 0.75,
 })
     .from(
-        ".home-heading .goodbye-title",
+        ".home-heading .title-02",
         {
             opacity: 0,
             y: 50,
@@ -107,7 +107,7 @@ introTl.from(
         "<0.1"
     )
     .from(
-        ".home-heading .to-title",
+        ".home-heading .title-03",
         {
             opacity: 0,
             y: 50,
@@ -117,7 +117,7 @@ introTl.from(
         "<0.1"
     )
     .from(
-        ".home-heading .boring-title",
+        ".home-heading .title-04",
         {
             opacity: 0,
             y: 50,
@@ -127,7 +127,27 @@ introTl.from(
         "<0.1"
     )
     .from(
-        ".home-heading .design-title",
+        ".home-heading .title-05",
+        {
+            opacity: 0,
+            y: 50,
+            ease: "elastic.out(1, 0.75)",
+            duration: 0.75,
+        },
+        "<0.1"
+    )
+    .from(
+        ".home-heading .title-06",
+        {
+            opacity: 0,
+            y: 50,
+            ease: "elastic.out(1, 0.75)",
+            duration: 0.75,
+        },
+        "<0.1"
+    )
+    .from(
+        ".home-heading .title-07",
         {
             opacity: 0,
             y: 50,
@@ -203,6 +223,13 @@ introTl.from(
 // ---------------------------------------
 
 const logoPaths = document.querySelectorAll(".logo path");
+const lastPath = logoPaths[logoPaths.length - 1];
+let colorIndex = 0;
+const colors = [
+    getComputedStyle(document.documentElement).getPropertyValue("--secondary-color"),
+    getComputedStyle(document.documentElement).getPropertyValue("--tertiary-color"),
+    getComputedStyle(document.documentElement).getPropertyValue("--primary-color"),
+];
 
 document.querySelector(".logo").addEventListener("mouseenter", () => {
     logoPaths.forEach((path, index) => {
@@ -220,11 +247,22 @@ document.querySelector(".logo").addEventListener("mouseenter", () => {
             }
         });
     });
+    
+    // Rotate the fill color of the last path
+    gsap.to(lastPath, {
+        fill: colors[colorIndex],
+        duration: 0.8,
+        ease: "power2.inOut",
+        onComplete: () => {
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+    });
 });
 
 // ---------------------------------------
 // Customer Logo Scroll Animation
 // ---------------------------------------
+
 let logoTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".customer-logo",
@@ -254,7 +292,6 @@ logoTl.to(".customer-logo", {
     display: "block",
     stagger: 0.05,
 }, "-=0.1");
-
 
 // ---------------------------------------
 // Nav Scroll Out and In Animation
@@ -304,14 +341,14 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.to(paths, {
     scrollTrigger: {
         trigger: ".philosophy-wrapper",
-        start: "top 25%",
+        start: "top center",
         end: "bottom 75%",
         scrub: 1.5,
         markers: false,
     },
     strokeDashoffset: 0,  // Animate the stroke to reveal
     strokeDasharray: "var(--path-length)",
-    // stroke: "rgba(225, 6, 0, 0.5)",
+    stroke: "rgba(225, 6, 0, 0.5)",
     fill: "rgba(163, 163, 163, 0.02)",
     ease: "none",
 });
@@ -329,8 +366,118 @@ gsap.from(".col-philosophy", {
         markers: false,
     },
             opacity: 0,
-            y: 50,
+            y: 100,
             ease: "easyEase",
-            duration: 1,
+            duration: 1.5,
 
-}); 
+});
+
+// ---------------------------------------
+// Selection Color Change Function
+// ---------------------------------------
+
+let isSelecting = false;
+
+document.addEventListener("selectionchange", () => {
+    const selection = window.getSelection();
+    const selectedText = selection.toString();
+
+    if (!isSelecting && selectedText) {
+        // User starts selecting text
+        isSelecting = true;
+    } else if (isSelecting && !selectedText) {
+        // User has completed and deselected text
+        const colors = [
+            getComputedStyle(document.documentElement).getPropertyValue("--primary-color").trim(),
+            getComputedStyle(document.documentElement).getPropertyValue("--secondary-color").trim(),
+            getComputedStyle(document.documentElement).getPropertyValue("--tertiary-color").trim()
+        ];
+
+        const currentColor = getComputedStyle(document.documentElement).getPropertyValue("--selection-color").trim();
+        const nextColor = colors[(colors.indexOf(currentColor) + 1) % colors.length];
+        document.documentElement.style.setProperty("--selection-color", nextColor);
+
+        isSelecting = false;
+    }
+});
+
+// ---------------------------------------
+// Change Word Animation
+// ---------------------------------------
+
+// Define the list of words and colors  
+const words = ["businesses.", "startups.", "entreprenuers.", "non-profits."];  
+const wordColors = ["var(--primary-color)", "var(--secondary-color)", "var(--tertiary-color)"];  
+  
+// Initialize variables  
+let wordIndex = 0;  
+let wordColorIndex = 0;  
+let isTyping = false;  
+  
+// Get the change word element  
+const changeWordElement = document.querySelector(".change-word");  
+  
+// Function to type the word  
+function typeWord(word) {  
+   let typedWord = "";  
+   const typeInterval = setInterval(() => {  
+      if (typedWord.length < word.length) {  
+        typedWord += word[typedWord.length];  
+        changeWordElement.textContent = typedWord;  
+      } else {  
+        clearInterval(typeInterval);  
+        setTimeout(() => {  
+           backspaceWord(word);  
+        }, 1075);  
+      }  
+   }, 125);  
+}  
+  
+// Function to backspace the word  
+function backspaceWord(word) {  
+   let typedWord = word;  
+   const backspaceInterval = setInterval(() => {  
+      if (typedWord.length > 0) {  
+        typedWord = typedWord.substring(0, typedWord.length - 1);  
+        changeWordElement.textContent = typedWord;  
+      } else {  
+        clearInterval(backspaceInterval);  
+        changeWord();  
+      }  
+   }, 75);  
+}  
+  
+// Function to change the word  
+function changeWord() {  
+   wordIndex = (wordIndex + 1) % words.length;  
+   wordColorIndex = (wordColorIndex + 1) % wordColors.length;  
+   changeWordElement.style.color = wordColors[wordColorIndex];  
+   typeWord(words[wordIndex]);  
+}  
+  
+// Start typing the first word  
+setTimeout(() => {  
+   changeWordElement.style.color = wordColors[wordColorIndex];  
+   typeWord(words[wordIndex]);  
+}, 2500);
+
+
+// ---------------------------------------
+// Case Study Hover Color Change
+// ---------------------------------------
+
+// Rotate through different background colors on hover state
+let bgColors = [  
+    "var(--primary-color)",  
+    "var(--secondary-color)",  
+    "var(--tertiary-color)",  
+];  
+let bgIndex = 0;  
+  
+document.querySelectorAll(".case-study-card").forEach(card => {  
+    card.addEventListener("mouseover", () => {  
+        card.style.setProperty("--hover-bg-color", bgColors[bgIndex]);  
+        bgIndex = (bgIndex + 1) % bgColors.length;  
+    });  
+});
+

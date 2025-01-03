@@ -9,15 +9,21 @@
 .hero-content {
     justify-content: space-between;
     row-gap: var(--col-gap);
+    overflow: hidden;
+}
+
+.home-heading-wrapper {
+    width: var(--col-span-3321);
 }
 
 /* Hero headline animation classes */
-.say-title,
-.goodbye-title,
-.to-title,
-.boring-title,
-.design-title,
-.period-title {
+.title-01,
+.title-02,
+.title-03,
+.title-04,
+.title-05,
+.title-06,
+.title-07 {
     display: inline-block;
 }
 
@@ -41,6 +47,7 @@
     /* Your styles for Small screens go here */
     .row-inner.hero-content {
         flex-direction: column-reverse;
+        gap: var(--col-gap);
     }
 }
 
@@ -51,6 +58,8 @@
 }
 
 
+
+
 /* ---- HERO BACKGROUND GRADIENT ---- */
 
 .bg-gradient-wrapper {
@@ -58,9 +67,31 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     /* z-index: 0; */
     overflow-x: clip;
+}
+
+.video-wrapper {
+    position: absolute;
+    width: calc(var(--col-span-video-wrapper) + var(--col-gap));
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow: clip;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 101vh;
+    object-fit: cover;
+    opacity: var(--hero-video-opacity);
+    filter: blur(4px) grayscale(1) contrast(1.1);
 }
 
 .bg-gradient-red {
@@ -125,16 +156,54 @@
     padding: var(--container-padding) 0;
     border: solid var(--color-border);
     border-width: 1px 0;
+    overflow: hidden;
+    height: 106px;
 }
 
-img.customer-logo {
+@media (min-width: 320px) and (max-width: 600px) {
+    .logo-col-03,
+    .logo-col-04 {
+        display: none;
+    }
+    
+}
+
+.customer-logo,
+.customer-logo-2 {
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    margin: auto;
+}
+
+.customer-logo svg,
+.customer-logo-2 svg {
     height: 48px;
 }
 
-img.customer-logo-2 {
-    height: 48px;
+.customer-logo-2 {
     display: none;
 }
+
+/* Large: 881px - 1121px */
+@media (min-width: 881px) and (max-width: 1121px) {
+
+    /* Your styles for Large screens go here */
+    .logo-col-04 {
+        display: none;
+    }
+}
+
+/* Medium: 601px - 880px */
+@media (min-width: 601px) and (max-width: 880px) {
+
+    /* Your styles for Medium screens go here */
+    .logo-col-03,
+    .logo-col-04 {
+        display: none;
+    }
+}
+
 
 /* Small: 320px - 600px */
 @media (min-width: 320px) and (max-width: 600px) {
@@ -142,7 +211,12 @@ img.customer-logo-2 {
     /* Your styles for Small screens go here */
     .logo-col {
         width: var(--col-medium);
+        height: 66px;
     }
+    .customer-logo,
+    .customer-logo-2 {
+    height: 24px;
+}
 }
 
 /* Our Philosophy Section */
@@ -155,16 +229,41 @@ img.customer-logo-2 {
     padding-bottom: calc(var(--container-padding) * 4);
     overflow: visible;
     align-items: center;
+    justify-content: center;
 }
 
 .col-monogram {
+    position: relative;
     display: flex;
-    width: calc(var(--col-span-2121) + .5px);
-    padding: var(--col-gap-xl) 0;
+    width: calc(var(--col-span-2121) - 2px);
+    height: 0;
+    padding-bottom: calc(9 / 16 * (var(--col-span-2121) - 2px));
     justify-content: center;
-    background-color: var(--body-bg-color);
     z-index: 803;
-    border: solid var(--color-border) 1px;
+    border-top: solid var(--color-border) 1px;
+    border-bottom: solid var(--color-border) 1px;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg-color);
+    z-index: 802;
+}
+
+.client-work-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .nbd-monogram {
@@ -230,7 +329,7 @@ img.customer-logo-2 {
     width: max-content;
     padding-left: var(--col-gap);
     gap: var(--col-gap);
-    animation: marquee-move-text 40s linear infinite;
+    animation: marquee-move-text 60s linear infinite;
     animation-play-state: pause;
 }
 
@@ -291,6 +390,49 @@ img.customer-logo-2 {
     justify-content: space-between;
 }
 
+.case-study-card:hover img {
+    transform: scale(1.15) rotate(5deg);
+    transition: all 300ms ease-in-out;
+}
+
+.case-study-card:not(:hover) img {
+    transform: scale(1) rotate(0deg);
+    transition: all 300ms ease-in-out;
+}
+
+.case-study-card {
+    position: relative;
+    border-radius: var(--border-radius-medium);
+    overflow: hidden; /* Ensures the gradient covers the image entirely */
+
+    &::before {
+        content: "Coming soon!";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--hover-bg-color);
+        color: white;
+        opacity: 0;
+        transition: opacity ease-in-out 0.3s;
+        z-index: 1; /* Ensures the gradient is above the image */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        position: relative; /* Ensures the image is above the gradient */
+        z-index: 0;
+    }
+
+    &:hover::before {
+        opacity: 0.9;
+    }
+}
+
+
 .cs-01 {
     transform: translateY(0);
 }
@@ -331,6 +473,12 @@ img.customer-logo-2 {
     .cs-08 {
         display: none;
     }
+    .services-row-inner {
+        flex-flow: column nowrap;
+    }
+    .services-col {
+        width: var(--col-span-2);
+    }
 }
 
 /* Medium: 601px - 880px */
@@ -351,7 +499,13 @@ img.customer-logo-2 {
 @media (min-width: 320px) and (max-width: 600px) {
 
     /* Your styles for Small screens go here */
-
+    .cs-05,
+    .cs-06,
+    .cs-07,
+    .cs-08 {
+        display: none;
+        transform: translateY(0);
+    }
 }
 
 
@@ -363,8 +517,7 @@ img.customer-logo-2 {
     display: flex;
     position: relative;
     width: var(--col-span-all);
-    padding-top: calc(var(--container-padding-xl) * 3);
-    padding-bottom: calc(var(--container-padding-xl) * 2);
+    padding: calc(var(--container-padding-xl) * 3) 0 calc(var(--container-padding-xl) * 2) 0;
 }
 
 .our-work-button {
@@ -397,7 +550,7 @@ img.customer-logo-2 {
 
     /* Your styles for Large screens go here */
     .our-work-button {
-        width: calc(var(--col-span-all) - 1.5px);
+        width: calc(var(--col-span-all) - 2px);
     }
 }
 
@@ -485,6 +638,18 @@ img.customer-logo-2 {
     gap: var(--col-gap-xs);
 }
 
+/* Large: 881px - 1120px */
+@media (min-width: 881px) and (max-width: 1120px) {
+
+    .services-row-inner {
+        flex-flow: column nowrap;
+        gap: var(--container-padding-l);
+    }
+    .services-col {
+        width: var(--col-span-2221);
+    }
+}
+
 .services-01 {
     transform: translateY(0px);
 }
@@ -499,6 +664,15 @@ img.customer-logo-2 {
 
 .services-04 {
     transform: translateY(420px);
+}
+
+@media (min-width: 320px) and (max-width: 1120px) {
+    .services-01,
+    .services-02,
+    .services-03,
+    .services-04 {
+        transform: translateY(0px);
+    }
 }
 
 /* ----------- */
@@ -597,7 +771,7 @@ img.customer-logo-2 {
 
 .how-we-work h2,
 .how-we-work p.body-l {
-    color: var(--text-theme-color);
+    color: var(--text-light-bg-color);
     padding-bottom: 28px;
 }
 
@@ -618,26 +792,6 @@ img.customer-logo-2 {
     color: var(--gray-0);
 }
 
-/* Pricing and pakaging card hover states */
-
-.hww-hover {
-    position: relative;
-    border-radius: var(--border-radius-medium);
-    transition: color ease-in-out 0.3s;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        background: #EDEDED;
-
-        &:hover {
-            color: black;    
-        }
-    }
-}
-
 .how-we-work-cta {
     display: flex;
     flex-flow: row nowrap;
@@ -652,13 +806,29 @@ div.how-we-work-cta::before {
     left: 0;
     right: 0;
     top: 0;
-    /* Align with the bottom of the nav */
     height: 1px;
-    /* Thickness of the line */
     background-color: var(--color-border);
-    /* Color of the line */
     z-index: -1;
-    /* Adjust z-index as needed */
+}
+
+/* Pricing and pakaging card hover states */
+
+.hww-hover {
+    position: relative;
+    border-radius: var(--border-radius-medium);
+    transition: color ease-in-out 0.3s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background: #e6e9f0;
+
+        &:hover {
+            color: black;    
+        }
+    }
 }
 
 .hww-hover {
@@ -704,7 +874,7 @@ div.how-we-work-cta::before {
         position: absolute;
         top: 0;
         z-index: -1;
-        background: var(--body-bg-color);
+        background: var(--gray-950);
 
         &:hover {
             color: red;
@@ -786,7 +956,7 @@ div.how-we-work-cta::before {
 
 .footer-form-wrapper h5,
 .footer-form-wrapper p {
-    color: var(--text-theme-color);
+    color: var(--text-light-bg-color);
 }
 
 .footer-col-split {

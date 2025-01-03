@@ -2,16 +2,16 @@
 /* ----- TYPOGRAPHY STYLES ----- */
 /* ----------------------------- */
 
-:root{
-    
+:root {
+
     /* Fonts */
-    --display-font-family: "Ringside Extra Wide", Helvetica, sans-serif;
-    --heading-font-family: "Ringside Wide", Helvetica, sans-serif;
-    --body-font-family: "Ringside Wide", Helvetica, sans-serif;
+    --display-font-family: "DM Sans", Helvetica, sans-serif;
+    --heading-font-family: "DM Sans", Helvetica, sans-serif;
+    --body-font-family: "DM Sans", Helvetica, sans-serif;
 
     /* Font Sizes */
-    --display-font-size-xl: clamp(3rem, 7vw + 1.6rem, 10rem);
-    --display-font-size-l: clamp(2.25rem, 6.75vw + 0.9rem, 9rem);
+    --display-font-size-xl: clamp(2.5rem, 7.5vw + 1rem, 10rem);
+    --display-font-size-l: clamp(2.125rem, 6.875vw + 0.75rem, 9rem);
     --display-font-size-m: clamp(2rem, 5vw + 1rem, 7rem);
     --display-font-size-sm: clamp(1.75rem, 4.25vw + 0.9rem, 6rem);
     --display-font-size-xs: clamp(1.5rem, 2.5vw + 1rem, 4rem);
@@ -31,13 +31,11 @@
 
     --mobile-menu-font-size: clamp(4.5rem, 6.75vw + 1.6rem, 10rem);
 
-
     /* Font Weight */
-    --display-font-weight: 700;
-    --heading-font-weight: 500;
+    --display-font-weight: 600;
+    --heading-font-weight: 400;
     --light-font-weight: 300;
-    --body-font-weight: 100;
-
+    --body-font-weight: 200;
 
     /* Line Height */
     --display-line-height: 1.1;
@@ -46,8 +44,8 @@
 
     /* Letter Spacing */
     --display-letter-spacing: -0.06em;
-    --heading-letter-spacing: -0.04em;
-    --body-letter-spacing: -0.02em;
+    --heading-letter-spacing: -0.01em;
+    --body-letter-spacing: 0.03em;
 }
 
 /* --- DISPLAY --- */
@@ -59,54 +57,59 @@
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.05em;
-    color: var(--text-theme-color)
+    color: var(--text-theme-color);
+    font-feature-settings: 'ss03' on;
 }
 
 .display-l {
-    font-family: var(--display-font-family), sans-serif;
+    font-family: var(--display-font-family);
     font-size: var(--display-font-size-l);
     line-height: var(--display-line-height);
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
-    color: var(--text-theme-color)
+    color: var(--text-theme-color);
+    font-feature-settings: 'ss03' on;
 }
 
 .display-m {
-    font-family: var(--display-font-family), sans-serif;
+    font-family: var(--display-font-family);
     font-size: var(--display-font-size-m);
     line-height: var(--display-line-height);
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
-    color: var(--text-theme-color)
+    color: var(--text-theme-color);
+    font-feature-settings: 'ss03' on;
 }
 
 .display-sm {
-    font-family: var(--display-font-family), sans-serif;
+    font-family: var(--display-font-family);
     font-size: var(--display-font-size-sm);
     line-height: var(--display-line-height);
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
-    color: var(--text-theme-color)
+    color: var(--text-theme-color);
+    font-feature-settings: 'ss03' on;
 }
 
 .display-xs {
-    font-family: var(--display-font-family), sans-serif;
+    font-family: var(--display-font-family);
     font-size: var(--display-font-size-xs);
     line-height: var(--display-line-height);
     letter-spacing: var(--display-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
-    color: var(--text-theme-color)
+    color: var(--text-theme-color);
+    font-feature-settings: 'ss03' on;
 }
 
 /* --- HEADINGS --- */
 
 .heading-xl {
     font-family: var(--heading-font-family);
-    font-family: var(--heading-font-family), sans-serif;
+    font-family: var(--heading-font-family);
     font-size: var(--heading-font-size-xl);
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
@@ -116,7 +119,7 @@
 
 .heading-l {
     font-family: var(--heading-font-family);
-    font-family: var(--heading-font-family), sans-serif;
+    font-family: var(--heading-font-family);
     font-size: var(--heading-font-size-l);
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
@@ -126,7 +129,7 @@
 
 .heading-m {
     font-family: var(--heading-font-family);
-    font-family: var(--heading-font-family), sans-serif;
+    font-family: var(--heading-font-family);
     font-size: var(--heading-font-size-m);
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
@@ -136,7 +139,7 @@
 
 .heading-sm {
     font-family: var(--heading-font-family);
-    font-family: var(--heading-font-family), sans-serif;
+    font-family: var(--heading-font-family);
     font-size: var(--heading-font-size-sm);
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);
@@ -146,7 +149,7 @@
 
 .heading-xs {
     font-family: var(--heading-font-family);
-    font-family: var(--heading-font-family), sans-serif;
+    font-family: var(--heading-font-family);
     font-size: var(--heading-font-size-xs);
     line-height: var(--heading-line-height);
     letter-spacing: var(--heading-letter-spacing);

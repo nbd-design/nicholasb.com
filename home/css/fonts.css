@@ -1,199 +1,83 @@
-/* -------------------- */
-/*---- Sentinel Pro ----*/
-/* -------------------- */
+/* -------- DM Sans -------- */
+/* -------- DM Sans -------- */
+/* -------- DM Sans -------- */
 
 @font-face {
-    font-family: 'Sentinel';
-    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Black-Pro.otf');
-    font-weight: 900;
+    font-family: "DM Sans";
+    src: url('../fonts/dmsans/DMSans-VariableFont_opsz_wght.woff2') format('woff2'),
+         url('../fonts/dmsans/DMSans-VariableFont_opsz_wght.otf') format('opentype'),
+         url('../fonts/dmsans/DMSans-VariableFont_opsz_wght.ttf') format('truetype');
+    font-weight: 100 700;
     font-style: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Sentinel';
-    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Bold-Pro.otf');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-thin {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Sentinel';
-    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Semibold-Pro.otf');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-extralight {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Sentinel';
-    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Medium-Pro.otf');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-light {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Sentinel';
-    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Book-Pro.otf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-regular {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Sentinel';
-    src: url('../fonts/sentinel-pro/OTF/SentinelSSm-Light-Pro.otf');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-medium {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-/* -------------------------------- */
-/*-------- Ringside Extra Wide -----*/
-/* -------------------------------- */
-
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-Thin.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-Thin.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-semibold {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-Light.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-Light.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-bold {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-Regular.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-Regular.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-extrabold {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-Medium.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-Medium.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-black {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-Semibold.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-Semibold.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-Bold.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-Bold.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-ExtraBold.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-ExtraBold.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Extra Wide';
-    src: url('../fonts/ringside/otf/RingsideExtraWide-Black.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideExtraWide-Black.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideExtraWide-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* -------------------------- */
-/*-------- Ringside Wide -----*/
-/* -------------------------- */
-
-@font-face {
-    font-family: 'Ringside Wide';
-    src: url('../fonts/ringside/otf/RingsideWide-Thin.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideWide-Thin.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideWide-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Wide';
-    src: url('../fonts/ringside/otf/RingsideWide-Light.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideWide-Light.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideWide-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Wide';
-    src: url('../fonts/ringside/otf/RingsideWide-Regular.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideWide-Regular.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideWide-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Wide';
-    src: url('../fonts/ringside/otf/RingsideWide-Medium.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideWide-Medium.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideWide-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Wide';
-    src: url('../fonts/ringside/otf/RingsideWide-Bold.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideWide-Bold.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideWide-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ringside Wide';
-    src: url('../fonts/ringside/otf/RingsideWide-Black.otf') format('opentype'),
-         url('../fonts/ringside/woff2/RingsideWide-Black.woff2') format('woff2'),
-         url('../fonts/ringside/woff/RingsideWide-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+.dm-sans-extrablack {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
 }
