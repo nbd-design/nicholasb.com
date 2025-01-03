@@ -622,8 +622,6 @@ g{
     }
 }
 
-
-
 /* ----------------------------- */
 /* -------- BODY BUTTON -------- */
 /* ----------------------------- */
@@ -737,7 +735,6 @@ g{
     transition: transform 0.5s ease-in-out;
 }
 
-
 /* ---------- */
 /* TYPOGRAPHY */
 /* ---------- */
@@ -749,7 +746,6 @@ g{
 .period {
     color: var(--primary-color);
 }
-
 
 .preloader {
     position: fixed;
