@@ -422,7 +422,7 @@ document.addEventListener("selectionchange", () => {
 // ---------------------------------------
 
 // Define the list of words and colors  
-const words = ["businesses.", "startups.", "entreprenuers.", "non-profits."];
+const words = ["startups.", "marketers.", "organizations.", "non-profits."];
 const wordColors = ["var(--primary-color)", "var(--secondary-color)", "var(--tertiary-color)"];
 
 // Initialize variables  

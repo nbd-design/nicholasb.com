@@ -76,7 +76,7 @@
     font-family: var(--display-font-family);
     font-size: var(--display-font-size-m);
     line-height: var(--display-line-height);
-    letter-spacing: var(--display-letter-spacing);
+    letter-spacing: var(--heading-letter-spacing);
     font-weight: var(--display-font-weight);
     word-spacing: 0.06em;
     color: var(--text-theme-color);

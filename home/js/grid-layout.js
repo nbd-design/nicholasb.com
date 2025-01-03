@@ -74,59 +74,60 @@ document.addEventListener('DOMContentLoaded', () => {
 // `createGridLines` FUNCTION
 // ----------------------------------------------------------------
 
-function createGridLines() {
-  const container = document.querySelector('.grid');
-  if (!container) {
-    console.error('Grid container not found!');
-    return;
-  }
+let hasAnimated = false; // Flag to track animation state
 
-  const viewportWidth = window.innerWidth;
-
-  // Determine the number of grid lines based on viewport width
-  let gridLineCount;
-  if (viewportWidth >= 1121) {
-    gridLineCount = 5; // XL screens
-  } else if (viewportWidth >= 881) {
-    gridLineCount = 4; // Large screens
-  } else if (viewportWidth >= 601) {
-    gridLineCount = 3; // Medium screens
-  } else {
-    gridLineCount = 2; // Small screens
-  }
-
-  // Clear existing grid lines
-  container.innerHTML = '';
-
-  // Create and append new grid lines
-  for (let i = 0; i < gridLineCount; i++) {
-    const gridLine = document.createElement('div');
-    gridLine.classList.add('grid-line');
-    container.appendChild(gridLine);
-  }
-
-  // Add animation to scale grid lines vertically
-  gsap.from(".grid-line", {
-    scaleY: 0,
-    transformOrigin: "top",
-    delay: 1.9,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power2.out"
-  });
-}
-
-// Ensure the DOM is fully loaded before running the script  
-document.addEventListener('DOMContentLoaded', () => {  
-  createGridLines();  
-  
-  let resizeTimeout;  
-  function debouncedCreateGridLines() {  
-   clearTimeout(resizeTimeout);  
-   resizeTimeout = setTimeout(createGridLines, 500);  
+function createGridLines(triggerAnimation = false) {  
+  const container = document.querySelector('.grid');  
+  if (!container) {  
+    console.error('Grid container not found!');  
+    return;  
   }  
   
-  window.addEventListener('resize', debouncedCreateGridLines);  
+  const viewportWidth = window.innerWidth;  
+  
+  // Determine the number of grid lines based on viewport width  
+  let gridLineCount;  
+  if (viewportWidth >= 1121) {  
+    gridLineCount = 5;  
+  } else if (viewportWidth >= 881) {  
+    gridLineCount = 4;  
+  } else if (viewportWidth >= 601) {  
+    gridLineCount = 3;  
+  } else {  
+    gridLineCount = 2;  
+  }  
+  
+  // Clear existing grid lines  
+  container.innerHTML = '';  
+  
+  // Create and append new grid lines  
+  for (let i = 0; i < gridLineCount; i++) {  
+    const gridLine = document.createElement('div');  
+    gridLine.classList.add('grid-line');  
+    if (!triggerAnimation) {  
+      gridLine.style.transform = 'scaleY(1)';  
+    }  
+    container.appendChild(gridLine);  
+  }  
+  
+  // Add animation only on the first page load  
+  if (triggerAnimation && !hasAnimated) {  
+    gsap.from(".grid-line", {  
+      scaleY: 0,  
+      transformOrigin: "top",  
+      delay: 1.9,  
+      duration: 1,  
+      stagger: 0.2,  
+      ease: "power2.out"  
+    });  
+    hasAnimated = true; // Prevent future animations
+  }  
+}  
+  
+// Ensure the DOM is fully loaded before running the script  
+document.addEventListener('DOMContentLoaded', () => {  
+  createGridLines(true);  
+  window.addEventListener('resize', () => createGridLines(false));  
 });
 
 

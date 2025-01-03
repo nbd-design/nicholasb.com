@@ -51,7 +51,7 @@
     }
 
     .hero {
-        height: 92vh;
+        height: 88vh;
     }
 }
 
@@ -61,22 +61,9 @@
     position: relative;
 }
 
+/* ---- HERO BACKGROUND Video ---- */
 
-
-
-/* ---- HERO BACKGROUND GRADIENT ---- */
-
-.bg-gradient-wrapper {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    /* z-index: 0; */
-    overflow-x: clip;
-}
-
-.video-wrapper {
+.hero-video-wrapper {
     position: absolute;
     width: calc(var(--col-span-video-wrapper) + var(--col-gap));
     top: 0;
@@ -84,6 +71,15 @@
     height: 100vh;
     overflow: clip;
     border-bottom: 1px solid var(--color-border);
+}
+
+/* Small: 320px - 600px */
+@media (min-width: 320px) and (max-width: 600px) {
+
+    /* Your styles for Small screens go here */
+    .hero-video-wrapper {
+        height: 88vh;
+    }
 }
 
 .hero-video {
@@ -96,51 +92,6 @@
     object-fit: cover;
     opacity: var(--hero-video-opacity);
     filter: blur(4px) grayscale(1) contrast(1.1);
-}
-
-.bg-gradient-red {
-    top: 0%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(3, 1);
-    opacity: 0.5;
-    --gradient-size: calc(var(--title-size) * 12);
-    width: var(--gradient-size);
-    height: var(--gradient-size);
-    background: radial-gradient(circle, #e10600 0%, #e1060000 66%);
-    position: absolute;
-    pointer-events: none;
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.bg-gradient-philosophy {
-    top: 50%;
-    left: 0%;
-    transform: translate(-50%, -50%) scale(1.5, 1);
-    opacity: 0.35;
-    --gradient-size: calc(var(--title-size) * 12);
-    width: var(--gradient-size);
-    height: var(--gradient-size);
-    background: radial-gradient(circle, #005ECC 0%, #005ECC00 66%);
-    position: absolute;
-    pointer-events: none;
-    border-radius: 50%;
-    z-index: 805;
-}
-
-.bg-gradient-recent-work {
-    top: 50%;
-    left: 0%;
-    transform: translate(-50%, -50%) scale(1.5, 1);
-    opacity: 0.35;
-    --gradient-size: calc(var(--title-size) * 12);
-    width: var(--gradient-size);
-    height: var(--gradient-size);
-    background: radial-gradient(circle, #FFC700 0%, #FFC70000 66%);
-    position: absolute;
-    pointer-events: none;
-    border-radius: 50%;
-    z-index: 805;
 }
 
 /* LOGO ROW STYLES */
@@ -215,11 +166,11 @@
     /* Your styles for Small screens go here */
     .logo-col {
         width: var(--col-medium);
-        height: 66px;
+        height: 74px;
     }
-    .customer-logo,
-    .customer-logo-2 {
-    height: 24px;
+    .customer-logo svg,
+    .customer-logo-2 svg {
+    height: 32px;
 }
 }
 
@@ -249,7 +200,7 @@
     overflow: hidden;
 }
 
-.video-container {
+.client-work-video-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -304,10 +255,6 @@
     }
 
     .col-philosophy {
-        width: var(--col-span-all);
-    }
-
-    .col-monogram {
         width: var(--col-span-all);
     }
 }

@@ -60,6 +60,10 @@ hr {
     z-index: 1000;
 }
 
+strong {
+    letter-spacing: var(--heading-letter-spacing);
+}
+
 ::selection {
     background-color: var(--selection-color);
     color: var(--gray-0);
