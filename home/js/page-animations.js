@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     tl.to(".case-study-col", { duration: 4, y: 0 });
 
+    // Translate Services Section Content on Y axis
 
     let stl = gsap.timeline({
         scrollTrigger: {
@@ -36,6 +37,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
 }); //Do not delete
+
+// Case study opacity on scroll
+gsap.utils.toArray(".cs-01, .cs-02, .cs-03, .cs-04, .cs-05, .cs-06, .cs-07, .cs-08").forEach(item => {
+    gsap.from(item, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            end: "bottom 10%",
+            toggleActions: "play none none reverse",
+            duration: 1
+        },
+    });
+});
+
 
 // ---------------------------------------------------------------------------------
 // APPLY SCROLL TRIGGER PARALLAX WITH GSAP BY ADDING [data-speed] ATTRIBUTE IN HTML
@@ -91,11 +107,11 @@ introTl.from(
         duration: 0.5,
     })
     .from(".home-heading .title-01", {
-    opacity: 0,
-    y: 50,
-    ease: "elastic.out(1, 0.75)",
-    duration: 0.75,
-})
+        opacity: 0,
+        y: 50,
+        ease: "elastic.out(1, 0.75)",
+        duration: 0.75,
+    })
     .from(
         ".home-heading .title-02",
         {
@@ -181,7 +197,7 @@ introTl.from(
             duration: .2,
             stagger: 0,
         },
-        "<0.1" 
+        "<0.1"
     )
     .from(
         ".btn-content",
@@ -193,7 +209,7 @@ introTl.from(
             duration: 0.75,
             stagger: 0,
         },
-        "<0.1" 
+        "<0.1"
     )
     .from(
         ".btn-content i",
@@ -247,7 +263,7 @@ document.querySelector(".logo").addEventListener("mouseenter", () => {
             }
         });
     });
-    
+
     // Rotate the fill color of the last path
     gsap.to(lastPath, {
         fill: colors[colorIndex],
@@ -280,18 +296,18 @@ logoTl.to(".customer-logo", {
     display: "none",
     stagger: 0.1,
 })
-.fromTo(".customer-logo-2", {
-    opacity: 0,
-    x: -50,
-    display: "none"
-},
-{
-    opacity: 1,
-    x: 0,
-    duration: 0.4,
-    display: "block",
-    stagger: 0.05,
-}, "-=0.1");
+    .fromTo(".customer-logo-2", {
+        opacity: 0,
+        x: -50,
+        display: "none"
+    },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 0.4,
+            display: "block",
+            stagger: 0.05,
+        }, "-=0.1");
 
 // ---------------------------------------
 // Nav Scroll Out and In Animation
@@ -301,26 +317,26 @@ let lastScrollTop = 0;
 const nav = document.querySelector('.nav');
 
 window.addEventListener('scroll', () => {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-  if (Math.abs(scrollTop - lastScrollTop) > window.innerHeight * 0.6) {
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down
-      gsap.to(nav, {
-        y: -100, // Hide nav
-        duration: 0.4,
-        ease: 'power1.inOut'
-      });
-    } else {
-      // Scrolling up
-      gsap.to(nav, {
-        y: 0, // Show nav
-        duration: 0.4,
-        ease: 'power1.inOut'
-      });
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (Math.abs(scrollTop - lastScrollTop) > window.innerHeight * 0.6) {
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            gsap.to(nav, {
+                y: -100, // Hide nav
+                duration: 0.4,
+                ease: 'power1.inOut'
+            });
+        } else {
+            // Scrolling up
+            gsap.to(nav, {
+                y: 0, // Show nav
+                duration: 0.4,
+                ease: 'power1.inOut'
+            });
+        }
+        lastScrollTop = scrollTop;
     }
-    lastScrollTop = scrollTop;
-  }
 });
 
 // ---------------------------------------
@@ -330,28 +346,28 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const svg = document.querySelector(".nbd-monogram");
     const paths = svg.querySelectorAll('path');
-    
+
     // Set custom properties for each path length
     paths.forEach(path => {
-      const pathLength = path.getTotalLength() / 3;
-      path.style.setProperty('--path-length', pathLength);  // Store path length for each path
-      path.style.strokeDasharray = pathLength;  // Set the dash array to the path length to hide the stroke
+        const pathLength = path.getTotalLength() / 3;
+        path.style.setProperty('--path-length', pathLength);  // Store path length for each path
+        path.style.strokeDasharray = pathLength;  // Set the dash array to the path length to hide the stroke
     });
 
-  gsap.to(paths, {
-    scrollTrigger: {
-        trigger: ".philosophy-wrapper",
-        start: "top center",
-        end: "bottom 75%",
-        scrub: 1.5,
-        markers: false,
-    },
-    strokeDashoffset: 0,  // Animate the stroke to reveal
-    strokeDasharray: "var(--path-length)",
-    stroke: "rgba(225, 6, 0, 0.5)",
-    fill: "rgba(163, 163, 163, 0.02)",
-    ease: "none",
-});
+    gsap.to(paths, {
+        scrollTrigger: {
+            trigger: ".philosophy-wrapper",
+            start: "top center",
+            end: "bottom 75%",
+            scrub: 1.5,
+            markers: false,
+        },
+        strokeDashoffset: 0,  // Animate the stroke to reveal
+        strokeDasharray: "var(--path-length)",
+        stroke: "rgba(225, 6, 0, 0.5)",
+        fill: "rgba(163, 163, 163, 0.02)",
+        ease: "none",
+    });
 });
 
 // ---------------------------------------
@@ -365,10 +381,10 @@ gsap.from(".col-philosophy", {
         end: "bottom 75%",
         markers: false,
     },
-            opacity: 0,
-            y: 100,
-            ease: "easyEase",
-            duration: 1.5,
+    opacity: 0,
+    y: 100,
+    ease: "easyEase",
+    duration: 1.5,
 
 });
 
@@ -406,59 +422,59 @@ document.addEventListener("selectionchange", () => {
 // ---------------------------------------
 
 // Define the list of words and colors  
-const words = ["businesses.", "startups.", "entreprenuers.", "non-profits."];  
-const wordColors = ["var(--primary-color)", "var(--secondary-color)", "var(--tertiary-color)"];  
-  
+const words = ["businesses.", "startups.", "entreprenuers.", "non-profits."];
+const wordColors = ["var(--primary-color)", "var(--secondary-color)", "var(--tertiary-color)"];
+
 // Initialize variables  
-let wordIndex = 0;  
-let wordColorIndex = 0;  
-let isTyping = false;  
-  
+let wordIndex = 0;
+let wordColorIndex = 0;
+let isTyping = false;
+
 // Get the change word element  
-const changeWordElement = document.querySelector(".change-word");  
-  
+const changeWordElement = document.querySelector(".change-word");
+
 // Function to type the word  
-function typeWord(word) {  
-   let typedWord = "";  
-   const typeInterval = setInterval(() => {  
-      if (typedWord.length < word.length) {  
-        typedWord += word[typedWord.length];  
-        changeWordElement.textContent = typedWord;  
-      } else {  
-        clearInterval(typeInterval);  
-        setTimeout(() => {  
-           backspaceWord(word);  
-        }, 1075);  
-      }  
-   }, 125);  
-}  
-  
+function typeWord(word) {
+    let typedWord = "";
+    const typeInterval = setInterval(() => {
+        if (typedWord.length < word.length) {
+            typedWord += word[typedWord.length];
+            changeWordElement.textContent = typedWord;
+        } else {
+            clearInterval(typeInterval);
+            setTimeout(() => {
+                backspaceWord(word);
+            }, 1075);
+        }
+    }, 125);
+}
+
 // Function to backspace the word  
-function backspaceWord(word) {  
-   let typedWord = word;  
-   const backspaceInterval = setInterval(() => {  
-      if (typedWord.length > 0) {  
-        typedWord = typedWord.substring(0, typedWord.length - 1);  
-        changeWordElement.textContent = typedWord;  
-      } else {  
-        clearInterval(backspaceInterval);  
-        changeWord();  
-      }  
-   }, 75);  
-}  
-  
+function backspaceWord(word) {
+    let typedWord = word;
+    const backspaceInterval = setInterval(() => {
+        if (typedWord.length > 0) {
+            typedWord = typedWord.substring(0, typedWord.length - 1);
+            changeWordElement.textContent = typedWord;
+        } else {
+            clearInterval(backspaceInterval);
+            changeWord();
+        }
+    }, 75);
+}
+
 // Function to change the word  
-function changeWord() {  
-   wordIndex = (wordIndex + 1) % words.length;  
-   wordColorIndex = (wordColorIndex + 1) % wordColors.length;  
-   changeWordElement.style.color = wordColors[wordColorIndex];  
-   typeWord(words[wordIndex]);  
-}  
-  
+function changeWord() {
+    wordIndex = (wordIndex + 1) % words.length;
+    wordColorIndex = (wordColorIndex + 1) % wordColors.length;
+    changeWordElement.style.color = wordColors[wordColorIndex];
+    typeWord(words[wordIndex]);
+}
+
 // Start typing the first word  
-setTimeout(() => {  
-   changeWordElement.style.color = wordColors[wordColorIndex];  
-   typeWord(words[wordIndex]);  
+setTimeout(() => {
+    changeWordElement.style.color = wordColors[wordColorIndex];
+    typeWord(words[wordIndex]);
 }, 2500);
 
 
@@ -467,17 +483,16 @@ setTimeout(() => {
 // ---------------------------------------
 
 // Rotate through different background colors on hover state
-let bgColors = [  
-    "var(--primary-color)",  
-    "var(--secondary-color)",  
-    "var(--tertiary-color)",  
-];  
-let bgIndex = 0;  
-  
-document.querySelectorAll(".case-study-card").forEach(card => {  
-    card.addEventListener("mouseover", () => {  
-        card.style.setProperty("--hover-bg-color", bgColors[bgIndex]);  
-        bgIndex = (bgIndex + 1) % bgColors.length;  
-    });  
-});
+let bgColors = [
+    "var(--primary-color)",
+    "var(--secondary-color)",
+    "var(--tertiary-color)",
+];
+let bgIndex = 0;
 
+document.querySelectorAll(".case-study-card").forEach(card => {
+    card.addEventListener("mouseover", () => {
+        card.style.setProperty("--hover-bg-color", bgColors[bgIndex]);
+        bgIndex = (bgIndex + 1) % bgColors.length;
+    });
+});

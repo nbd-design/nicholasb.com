@@ -116,11 +116,19 @@ function createGridLines() {
   });
 }
 
-// Ensure the DOM is fully loaded before running the script
-document.addEventListener('DOMContentLoaded', () => {
-  createGridLines();
-  window.addEventListener('resize', createGridLines);
+// Ensure the DOM is fully loaded before running the script  
+document.addEventListener('DOMContentLoaded', () => {  
+  createGridLines();  
+  
+  let resizeTimeout;  
+  function debouncedCreateGridLines() {  
+   clearTimeout(resizeTimeout);  
+   resizeTimeout = setTimeout(createGridLines, 500);  
+  }  
+  
+  window.addEventListener('resize', debouncedCreateGridLines);  
 });
+
 
 
 // ----------------------------------------------------------------

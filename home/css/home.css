@@ -49,6 +49,10 @@
         flex-direction: column-reverse;
         gap: var(--col-gap);
     }
+
+    .hero {
+        height: 92vh;
+    }
 }
 
 .intro-content{
@@ -272,7 +276,7 @@
     /* opacity: 0.05; */
 }
 
-/* Initial state for the paths  animated with gsap in page animations */
+/* Initial state for the paths animated with gsap in page animations */
 .nbd-monogram path {
     stroke: var(--color-border);
     stroke-width: 1; /* Set stroke width */
@@ -499,6 +503,12 @@
 @media (min-width: 320px) and (max-width: 600px) {
 
     /* Your styles for Small screens go here */
+    .cs-02,
+    .cs-03,
+    .cs-04 {
+        transform: translateY(0);
+    }
+
     .cs-05,
     .cs-06,
     .cs-07,
