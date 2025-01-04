@@ -7,77 +7,80 @@
     src: url('../fonts/dmsans/DMSans-VariableFont_opsz_wght.woff2') format('woff2'),
          url('../fonts/dmsans/DMSans-VariableFont_opsz_wght.otf') format('opentype'),
          url('../fonts/dmsans/DMSans-VariableFont_opsz_wght.ttf') format('truetype');
-    font-weight: 100 700;
+    font-weight: 100 1000;
+    font-stretch: normal;
     font-style: normal;
     font-display: swap;
+    font-variation-settings: "opsz", "wght";
 }
 
 .dm-sans-thin {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100;
+  font-variation-settings: "wght" 100;
   font-style: normal;
 }
 
 .dm-sans-extralight {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-variation-settings: "wght" 200;
   font-style: normal;
 }
 
 .dm-sans-light {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-variation-settings: "wght" 300;
   font-style: normal;
 }
 
 .dm-sans-regular {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-variation-settings: "wght" 400;
   font-style: normal;
 }
 
 .dm-sans-medium {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   font-style: normal;
 }
 
 .dm-sans-semibold {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-variation-settings: "wght" 600;
   font-style: normal;
 }
 
 .dm-sans-bold {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-variation-settings: "wght" 700;
   font-style: normal;
 }
 
 .dm-sans-extrabold {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 800;
+  font-variation-settings: "wght" 800;
   font-style: normal;
 }
 
 .dm-sans-black {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 900;
+  font-variation-settings: "wght" 900;
   font-style: normal;
 }
 
 .dm-sans-extrablack {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 1000;
+  font-variation-settings: "wght" 1000;
   font-style: normal;
 }
+
