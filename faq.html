@@ -1,0 +1,91 @@
+<style>
+    .accordion {
+        width: 100%;
+    }
+
+    .accordion-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-item:last-child {
+        border-bottom: none;
+    }
+
+    .accordion-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.5em;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .accordion-header:hover {
+        background-color: #f3f3f3;
+    }
+
+    .accordion-header::after {
+        content: '\25BE';
+        font-size: 0.75em;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .accordion-item.active .accordion-header::after {
+        transform: rotate(90deg);
+    }
+
+    .accordion-content {
+        display: none;
+        padding: 0.5em;
+        font-size: 0.875em;
+    }
+
+    .accordion-item.active .accordion-content {
+        display: block;
+    }
+
+    .accordion-content p {
+        margin: 0;
+    }
+</style>
+
+<div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-header">What is LCvista?</div>
+        <div class="accordion-content">
+            <p>LCvista is a community-driven platform for learning and sharing knowledge about web development, design, and technology. It's a place where people can come together to learn from each other, share their experiences, and help each other grow.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">How does it work?</div>
+        <div class="accordion-content">
+            <p>LCvista works by allowing users to create and share their own content in the form of articles, tutorials, and videos. The platform is organized into channels, which are categories based on different topics. Users can follow channels and receive notifications when new content is posted. Users can also create and join groups, which are communities of people with similar interests.</p>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">What makes LCvista unique?</div>
+        <div class="accordion-content">
+            <p>LCvista is unique in that it's a community-driven platform. This means that the content and the direction of the platform are determined by its users. It's also a platform that's focused on learning and sharing knowledge, rather than just sharing opinions or news. Additionally, LCvista is a platform that's focused on building a community of people who are interested in web development, design, and technology.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach((header) => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                accordionItem.classList.toggle('active');
+            });
+        });
+    });
+</script>
