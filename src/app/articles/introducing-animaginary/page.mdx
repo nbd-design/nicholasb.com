@@ -1,5 +1,7 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 
+export const dynamic = 'force-static'
+
 export const article = {
   author: 'Adam Wathan',
   date: '2022-09-02',
@@ -13,7 +15,7 @@ export const metadata = {
   description: article.description,
 }
 
-export default (props) => <ArticleLayout article={article} {...props} />
+export default () => <ArticleLayout article={article} />
 
 When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
 
